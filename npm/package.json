@@ -1,0 +1,50 @@
+{
+  "name": "dv-social-share",
+  "version": "0.0.1-8",
+  "description": "Social media share buttons for your next apps like React, Next.js, Vue.js, Angular.",
+  "main": "dist/bundle.js",
+  "browser": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react.js",
+    "next",
+    "nextjs",
+    "next.js",
+    "vue",
+    "vuejs",
+    "vue.js",
+    "social-share-links",
+    "share-button",
+    "social-share",
+    "social-media-share-link"
+  ],
+  "author": "Dhaval Vira <dhavalveera@gmail.com> (https://github.com/dhavalveera)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhavalveera/dv-social-share.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhavalveera/dv-social-share/issues"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/plugin-transform-runtime": "^7.22.7",
+    "@babel/preset-env": "^7.22.7",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/runtime": "^7.22.6",
+    "babel-loader": "^9.1.2",
+    "file-loader": "^6.2.0",
+    "react": "^18.2.0",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
