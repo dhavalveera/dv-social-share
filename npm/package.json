@@ -2,6 +2,9 @@
   "name": "dv-social-share",
   "version": "0.0.1-8",
   "description": "Social media share buttons for your next apps like React, Next.js, Vue.js, Angular.",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/bundle.js",
   "browser": "dist/bundle.js",
   "scripts": {
