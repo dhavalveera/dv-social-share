@@ -1,21 +1,26 @@
 const path = require("path");
-// const CustomDefinePlugin = require("./webpackConfig/CustomDefinePlugin");
+const CustomDefinePlugin = require("./webpackConfig/CustomDefinePlugin");
+const pkg = require("./package.json");
+
+const libraryName = pkg.name;
 
 module.exports = {
-  mode: "development",
-  entry: "./index.js",
+  mode: "production",
+  entry: path.resolve(__dirname, "index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    library: "dv-social-share",
+    library: libraryName,
     libraryTarget: "umd",
     umdNamedDefine: true,
     globalObject: 'typeof self !== "undefined" ? self : this', // Add this line
   },
+  plugins: [new CustomDefinePlugin()],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        include: path.resolve(__dirname),
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -26,12 +31,27 @@ module.exports = {
       },
     ],
   },
-  // plugins: [
-  //   // ... other plugins ...
-  //   new CustomDefinePlugin(),
-  // ],
+
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+      react: path.resolve(__dirname, "./node_modules/react"),
+    },
+  },
+  externals: {
+    // Don't bundle react or react-dom
+    react: {
+      commonjs: "react",
+      commonjs2: "react",
+      amd: "React",
+      root: "React",
+    },
+    "react-dom": {
+      commonjs: "react-dom",
+      commonjs2: "react-dom",
+      amd: "ReactDOM",
+      root: "ReactDOM",
+    },
   },
   performance: {
     hints: "warning",
