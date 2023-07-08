@@ -31,7 +31,7 @@ const PinterestShareBtn = ({ url, media, description, openInNewTab }) =>
 
 PinterestShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
-  media: PropTypes.string,
+  media: PropTypes.string.isRequired,
   description: PropTypes.string,
   openInNewTab: PropTypes.bool,
 };
