@@ -13,7 +13,7 @@ import { EmailIcon } from "../../icons";
 // Constants
 import { openShareDialogOnClick } from "../../constants";
 
-const generateEmailLink = (url, { subject, body, separator }) => {
+const generateEmailLink = (url, { subject, body, separator = " :: " }) => {
   return `mailto:${generateQueryParams({
     subject,
     body: body ? body + separator + url : url,
