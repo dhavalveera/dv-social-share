@@ -444,3 +444,27 @@ import { WhatsAppShareBtn } from "dv-social-share";
 | openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
 
 ---
+
+## 💖 Wrap Up
+
+If you think any of the `dv-social-share` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
+
+## 🌟 Contribution
+
+We'd love to have your helping hand on contributions to `dv-social-share` by forking and sending a pull request!
+
+Your contributions are welcome.
+
+How to contribute:
+
+- Fork the `dv-social-share` Repo
+- Create a New Branch from `main`
+- Push the Code in your branc and
+- Open pull request with improvements & more information on it
+- Discuss ideas in issues
+- Spread the word
+- Reach out with any feedback
+
+## ⚖️ License
+
+The MIT License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
