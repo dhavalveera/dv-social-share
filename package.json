@@ -29,6 +29,7 @@
     "social-media-share-link"
   ],
   "author": "Dhaval Vira <dhavalveera@gmail.com> (https://github.com/dhavalveera)",
+  "homepage": "https://dv-social-share.vercel.app",
   "license": "MIT",
   "repository": {
     "type": "git",
