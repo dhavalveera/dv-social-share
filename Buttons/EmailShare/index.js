@@ -1,3 +1,6 @@
+// PropTypes
+import PropTypes from "prop-types";
+
 // Utils
 import { generateQueryParams } from "../../utils";
 
@@ -17,12 +20,20 @@ const generateEmailLink = (url, { subject, body, separator }) => {
   })}`;
 };
 
-const EmailShareBtn = ({ url, subject, body, separator = " ", openInNewTab }) =>
+const EmailShareBtn = ({ url, subject, body, separator, openInNewTab }) =>
   MakeShareButton(
     "Email",
     generateEmailLink(url, { subject, body, separator }),
     EmailIcon,
     openInNewTab || openShareDialogOnClick
   );
+
+EmailShareBtn.propTypes = {
+  url: PropTypes.string.isRequired,
+  subject: PropTypes.string,
+  body: PropTypes.string,
+  separator: PropTypes.string,
+  openInNewTab: PropTypes.bool,
+};
 
 export default EmailShareBtn;

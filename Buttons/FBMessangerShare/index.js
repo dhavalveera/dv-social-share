@@ -1,3 +1,6 @@
+// PropTypes
+import PropTypes from "prop-types";
+
 // Utils
 import { generateQueryParams } from "../../utils";
 
@@ -8,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { FBMessangerIcon } from "../../icons";
 
 // Constants
-import { openShareDialogOnClick } from "../../constants";
+import { dontOpenShareDialogOnClick } from "../../constants";
 
 const generateFBMessangerLink = (url, { appId, redirectUri, to }) => {
   return `https://www.facebook.com/dialog/send${generateQueryParams({
@@ -21,10 +24,18 @@ const generateFBMessangerLink = (url, { appId, redirectUri, to }) => {
 
 const FBMessangerShareBtn = ({ url, appId, redirectUri, to, openInNewTab }) =>
   MakeShareButton(
-    "Email",
+    "Facebook Messanger",
     generateFBMessangerLink(url, { appId, redirectUri, to }),
     FBMessangerIcon,
-    openInNewTab || openShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick
   );
+
+FBMessangerShareBtn.propTypes = {
+  url: PropTypes.string.isRequired,
+  appId: PropTypes.string,
+  redirectUri: PropTypes.string,
+  to: PropTypes.string,
+  openInNewTab: PropTypes.bool,
+};
 
 export default FBMessangerShareBtn;

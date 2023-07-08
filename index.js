@@ -1,2 +1,16 @@
 export { default as EmailShareBtn } from "./Buttons/EmailShare";
 export { default as FBMessangerShareBtn } from "./Buttons/FBMessangerShare";
+export { default as FBShareBtn } from "./Buttons/FBShare";
+export { default as GABShareBtn } from "./Buttons/GABShare";
+export { default as HackerNewsShareBtn } from "./Buttons/HackerNewsShare";
+export { default as InstapaperShareBtn } from "./Buttons/InstapaperShare";
+export { default as LineShareBtn } from "./Buttons/LineShare";
+export { default as LinkedInShareBtn } from "./Buttons/LinkedInShare";
+export { default as PinterestShareBtn } from "./Buttons/PinterestShare";
+export { default as PocketShareBtn } from "./Buttons/PocketShare";
+export { default as RedditShareBtn } from "./Buttons/RedditShare";
+export { default as TelegramShareBtn } from "./Buttons/TelegramShare";
+export { default as TumblrShareBtn } from "./Buttons/TumblrShare";
+export { default as TwitterShareBtn } from "./Buttons/TwitterShare";
+export { default as VKShareBtn } from "./Buttons/VKShare";
+export { default as WhatsAppShareBtn } from "./Buttons/WhatsAppShare";
