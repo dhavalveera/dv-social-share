@@ -19,7 +19,7 @@ jobs:
         id: check_bug_label
         uses: actions/github-script@v4
         with:
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.LABEL_GREETING_SECRETS }}
           script: |
             const title = context.payload.issue.title;
             const isBug = title.includes("BUG");
@@ -31,7 +31,7 @@ jobs:
         id: check_technology_label
         uses: actions/github-script@v4
         with:
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.LABEL_GREETING_SECRETS }}
           script: |
             const title = context.payload.issue.title;
             const body = context.payload.issue.body;
@@ -46,7 +46,7 @@ jobs:
       - name: Add labels based on conditions
         uses: actions/github-script@v4
         with:
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.LABEL_GREETING_SECRETS }}
           script: |
             const isBug = context.payload.results.check_bug_label.isBug;
             const isTechnology = context.payload.results.check_technology_label.isTechnology;

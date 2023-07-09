@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/first-interaction@v1
         with:
-          # repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.LABEL_GREETING_SECRETS }}
           issue-message: "Thank You for finding an Issue, will look into it & resolve it asap."
           pr-message: "Thank You for the contributions, I'll review it & will merge it and then will release the new version."
