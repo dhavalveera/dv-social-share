@@ -9,6 +9,7 @@ export { default as LinkedInShareIcon } from "./LinkedInShareIcon";
 export { default as PinterestShareIcon } from "./PinterestShareIcon";
 export { default as PocketShareIcon } from "./PocketShareIcon";
 export { default as RedditShareIcon } from "./RedditShareIcon";
+export { default as SnapChatShareIcon } from "./SnapChatIcon";
 export { default as TelegramShareIcon } from "./TelegramShareIcon";
 export { default as TumblrShareIcon } from "./TumblrShareIcon";
 export { default as TwitterShareIcon } from "./TwitterShareIcon";

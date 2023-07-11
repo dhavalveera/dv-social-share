@@ -9,6 +9,7 @@ export { default as LinkedInShareBtn } from "./Buttons/LinkedInShare";
 export { default as PinterestShareBtn } from "./Buttons/PinterestShare";
 export { default as PocketShareBtn } from "./Buttons/PocketShare";
 export { default as RedditShareBtn } from "./Buttons/RedditShare";
+export { default as SnapchatShareBtn } from "./Buttons/SnapchatShare";
 export { default as TelegramShareBtn } from "./Buttons/TelegramShare";
 export { default as TumblrShareBtn } from "./Buttons/TumblrShare";
 export { default as TwitterShareBtn } from "./Buttons/TwitterShare";
