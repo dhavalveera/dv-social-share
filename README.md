@@ -67,6 +67,26 @@ import { BufferShareBtn } from "dv-social-share";
 
 ---
 
+## DiggShare
+
+#### 👨‍💻 Code
+
+```js
+import { DiggShareBtn } from "dv-social-share";
+
+<DiggShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />;
+```
+
+#### 📖 DiggShareBtn Props
+
+| Props        | Type    | Default | Description                                      | Required |
+| :----------- | :------ | :------ | :----------------------------------------------- | :------- |
+| url          | string  |         | The URL of the page to be shared.                | ✅       |
+| title        | string  |         | the Title to be shared.                          | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
+
+---
+
 ## EmailShare
 
 #### 👨‍💻 Code

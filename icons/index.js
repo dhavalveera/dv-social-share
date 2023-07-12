@@ -1,4 +1,5 @@
 export { default as BufferIcon } from "./BufferShareIcon";
+export { default as DiggIcon } from "./DiggShareIcon";
 export { default as EmailIcon } from "./EmailShareIcon";
 export { default as FBMessangerIcon } from "./FBMessangerIcon";
 export { default as FBShareIcon } from "./FBShareIcon";

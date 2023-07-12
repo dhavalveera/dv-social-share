@@ -1,4 +1,5 @@
 export { default as BufferShareBtn } from "./Buttons/BufferShare";
+export { default as DiggShareBtn } from "./Buttons/DiggShare";
 export { default as EmailShareBtn } from "./Buttons/EmailShare";
 export { default as FBMessangerShareBtn } from "./Buttons/FBMessangerShare";
 export { default as FBShareBtn } from "./Buttons/FBShare";
