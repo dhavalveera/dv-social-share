@@ -10,9 +10,12 @@ Social media share buttons for your next React.js, Next.js apps.
 
 - No dependencies
 - Share buttons for your next React.js & Next.js app
+  - Buffer
+  - Digg
   - Email
   - Facebook Messanger
   - Facebook
+  - FlipboardShare
   - GAB
   - HackerNews
   - Instapaper
