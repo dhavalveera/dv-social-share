@@ -49,8 +49,6 @@ yarn add dv-social-share --save
 
 ## BufferShare
 
---
-
 #### 👨‍💻 Code
 
 ```js
@@ -70,8 +68,6 @@ import { BufferShareBtn } from "dv-social-share";
 ---
 
 ## EmailShare
-
---
 
 #### 👨‍💻 Code
 
@@ -94,8 +90,6 @@ import { EmailShareBtn } from "dv-social-share";
 
 ## FBMessangerShare
 
---
-
 #### 👨‍💻 Code
 
 ```js
@@ -117,8 +111,6 @@ import { FBMessangerShareBtn } from "dv-social-share";
 ---
 
 ## FBShare
-
---
 
 #### 👨‍💻 Code
 
@@ -144,8 +136,6 @@ import { FBShareBtn } from "dv-social-share";
 
 ## GABShare
 
---
-
 #### 👨‍💻 Code
 
 ```js
@@ -168,8 +158,6 @@ import { GABShareBtn } from "dv-social-share";
 
 ## HackerNewsShare
 
---
-
 #### 👨‍💻 Code
 
 ```js
@@ -191,8 +179,6 @@ import { HackerNewsShareBtn } from "dv-social-share";
 ---
 
 ## InstapaperShare
-
---
 
 #### 👨‍💻 Code
 
@@ -217,8 +203,6 @@ import { InstapaperShareBtn } from "dv-social-share";
 
 ## LineShare
 
---
-
 #### 👨‍💻 Code
 
 ```js
@@ -240,8 +224,6 @@ import { LineShareBtn } from "dv-social-share";
 ---
 
 ## LinkedInShare
-
---
 
 #### 👨‍💻 Code
 
@@ -267,8 +249,6 @@ import { LinkedInShareBtn } from "dv-social-share";
 
 ## PinterestShare
 
---
-
 #### 👨‍💻 Code
 
 ```js
@@ -292,8 +272,6 @@ import { PinterestShareBtn } from "dv-social-share";
 
 ## PocketShare
 
---
-
 #### 👨‍💻 Code
 
 ```js
@@ -315,8 +293,6 @@ import { PocketShareBtn } from "dv-social-share";
 ---
 
 ## RedditShare
-
---
 
 #### 👨‍💻 Code
 
@@ -340,8 +316,6 @@ import { RedditShareBtn } from "dv-social-share";
 
 ## TelegramShare
 
---
-
 #### 👨‍💻 Code
 
 ```js copy
@@ -363,8 +337,6 @@ import { TelegramShareBtn } from "dv-social-share";
 ---
 
 ## TumblrShare
-
---
 
 #### 👨‍💻 Code
 
@@ -391,8 +363,6 @@ import { TumblrShareBtn } from "dv-social-share";
 
 ## TwitterShare
 
---
-
 #### 👨‍💻 Code
 
 ```js copy
@@ -418,8 +388,6 @@ import { TwitterShareBtn } from "dv-social-share";
 
 ## VKShare
 
---
-
 #### 👨‍💻 Code
 
 ```js copy
@@ -444,8 +412,6 @@ import { VKShareBtn } from "dv-social-share";
 ---
 
 ## WhatsAppShare
-
---
 
 #### 👨‍💻 Code
 
