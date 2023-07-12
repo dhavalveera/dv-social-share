@@ -11,7 +11,8 @@
   "types": "dist/dv-social-share.d.ts",
   "@comment unpkg": "dist/dv-social-share.umd.js",
   "scripts": {
-    "build": "rimraf dist && rollup -c"
+    "deleteDist": "rimraf dist",
+    "build": "npm run deleteDist && rollup -c"
   },
   "keywords": [
     "react",
