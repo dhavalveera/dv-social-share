@@ -47,6 +47,28 @@ yarn add dv-social-share --save
 
 ---
 
+## BufferShare
+
+--
+
+#### 👨‍💻 Code
+
+```js
+import { BufferShareBtn } from "dv-social-share";
+
+<BufferShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />;
+```
+
+#### 📖 BufferShareBtn Props
+
+| Props        | Type    | Default | Description                                      | Required |
+| :----------- | :------ | :------ | :----------------------------------------------- | :------- |
+| url          | string  |         | The URL of the page to be shared.                | ✅       |
+| title        | string  |         | the Title to be shared.                          | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
+
+---
+
 ## EmailShare
 
 --
@@ -78,6 +100,7 @@ import { EmailShareBtn } from "dv-social-share";
 
 ```js
 import { FBMessangerShareBtn } from "dv-social-share";
+
 <FBMessangerShareBtn url="https://dv-social-share.vercel.app" appId="" />;
 ```
 
