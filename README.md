@@ -154,6 +154,29 @@ import { FBShareBtn } from "dv-social-share";
 
 ---
 
+## FlipboardShare
+
+#### 👨‍💻 Code
+
+```js
+import { FlipboardShareBtn } from "dv-social-share";
+
+<FlipboardShareBtn
+  url="https://dv-social-share.vercel.app"
+  title="Dhaval Vira"
+/>;
+```
+
+#### 📖 FlipboardShareBtn Props
+
+| Props        | Type    | Default | Description                                      | Required |
+| :----------- | :------ | :------ | :----------------------------------------------- | :------- |
+| url          | string  |         | The URL of the page to be shared.                | ✅       |
+| title        | string  |         | the Title to be shared.                          | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
+
+---
+
 ## GABShare
 
 #### 👨‍💻 Code
