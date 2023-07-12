@@ -8,30 +8,30 @@ import { generateQueryParams } from "../../utils";
 import MakeShareButton from "../../ShareButton";
 
 // Icon
-import { BufferIcon } from "../../icons";
+import { DiggIcon } from "../../icons";
 
 // Constants
 import { dontOpenShareDialogOnClick } from "../../constants";
 
-const generateBufferLink = (url, { title }) => {
-  return `https://publish.buffer.com/compose${generateQueryParams({
-    text: title,
+const generateDiggLink = (url, { title }) => {
+  return `http://digg.com/submit${generateQueryParams({
     url,
+    title,
   })}`;
 };
 
-const BufferShareBtn = ({ url, title, openInNewTab }) =>
+const DiggShareBtn = ({ url, title, openInNewTab }) =>
   MakeShareButton(
-    "Buffer",
-    generateBufferLink(url, { title }),
-    BufferIcon,
+    "Digg",
+    generateDiggLink(url, { title }),
+    DiggIcon,
     openInNewTab || dontOpenShareDialogOnClick
   );
 
-BufferShareBtn.propTypes = {
+DiggShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string,
   openInNewTab: PropTypes.bool,
 };
 
-export default BufferShareBtn;
+export default DiggShareBtn;
