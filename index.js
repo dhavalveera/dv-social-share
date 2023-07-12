@@ -3,6 +3,7 @@ export { default as DiggShareBtn } from "./Buttons/DiggShare";
 export { default as EmailShareBtn } from "./Buttons/EmailShare";
 export { default as FBMessangerShareBtn } from "./Buttons/FBMessangerShare";
 export { default as FBShareBtn } from "./Buttons/FBShare";
+export { default as FlipboardShareBtn } from "./Buttons/FlipboardShare";
 export { default as GABShareBtn } from "./Buttons/GABShare";
 export { default as HackerNewsShareBtn } from "./Buttons/HackerNewsShare";
 export { default as InstapaperShareBtn } from "./Buttons/InstapaperShare";

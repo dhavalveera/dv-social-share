@@ -3,6 +3,7 @@ export { default as DiggIcon } from "./DiggShareIcon";
 export { default as EmailIcon } from "./EmailShareIcon";
 export { default as FBMessangerIcon } from "./FBMessangerIcon";
 export { default as FBShareIcon } from "./FBShareIcon";
+export { default as FlipboardShareIcon } from "./FlipboardShareIcon";
 export { default as GABShareIcon } from "./GABShareIcon";
 export { default as HackerNewsShareIcon } from "./HackerNewsShareIcon";
 export { default as InstaPaperShareIcon } from "./InstaPaperShareIcon";
