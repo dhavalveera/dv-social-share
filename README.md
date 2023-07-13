@@ -324,6 +324,31 @@ import { LiveJournalShareBtn } from "dv-social-share";
 
 ---
 
+## PinboardShare
+
+#### 👨‍💻 Code
+
+```js
+import { PinboardShareBtn } from "dv-social-share";
+
+<PinboardShareBtn
+  url="https://dv-social-share.vercel.app"
+  title="Dhaval Vira"
+  descriptin="descriptino to be shared"
+/>;
+```
+
+#### 📖 PinboardShareBtn Props
+
+| Props        | Type    | Default | Description                                      | Required |
+| :----------- | :------ | :------ | :----------------------------------------------- | :------- |
+| url          | string  |         | The URL of the to be page.                       | ✅       |
+| title        | string  |         | The Title of the Page to be shared.              | ✅       |
+| description  | string  |         | The description to be shared.                    | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
+
+---
+
 ## PinterestShare
 
 #### 👨‍💻 Code

@@ -10,6 +10,7 @@ export { default as InstapaperShareBtn } from "./Buttons/InstapaperShare";
 export { default as LineShareBtn } from "./Buttons/LineShare";
 export { default as LinkedInShareBtn } from "./Buttons/LinkedInShare";
 export { default as LiveJournalShareBtn } from "./Buttons/LiveJournalShare";
+export { default as PinboardShareBtn } from "./Buttons/PinboardShare";
 export { default as PinterestShareBtn } from "./Buttons/PinterestShare";
 export { default as PocketShareBtn } from "./Buttons/PocketShare";
 export { default as RedditShareBtn } from "./Buttons/RedditShare";
