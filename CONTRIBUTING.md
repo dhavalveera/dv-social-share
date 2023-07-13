@@ -46,14 +46,17 @@ If you wish to contribute code changes, please follow these guidelines:
 
 1. Icon:
    1. `/icons` => in this place create a Folder for the New Social Share Icon.
-   2. inside the newly created folder there'll be 2 files, 1 file will export the Base64 URL of the Icon
-   3. and the `index.js` add the relevant code to export the Icon.
-   4. go to `/icons/index.js` file and export the newly added Icon.
+   2. in `index.js` add the Base64 Image URL & export it.
+   3. go to `/icons/index.js` file and export the newly added Icon.
 2. Code:
    1. `/Buttons` => in this place create a Folder for the New Social Share Button.
    2. inside of the newly created Folder, created an `index.js` file
    3. and in the newly created `/index.js` file write the code & logic for the Button to work.
    4. in the end go to `index.js` file in the root of the directory, export the newly added Button.
+3. Types:
+   1. `/types/index.d.ts` contains the Types declaration for the Button Props defined in `/Buttons/socialShareBtnName.js`
+   2. add the `type` option with relevant params e.g. url, title
+   3. in declare function, export the function with the types.
 
 ##### Submitting a Pull Request
 
