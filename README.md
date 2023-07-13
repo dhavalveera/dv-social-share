@@ -25,6 +25,7 @@ Social media share buttons for your next React.js, Next.js apps.
   - Pinterest
   - Pocket
   - Reddit
+  - Refind
   - Telegram
   - Tumblr
   - Twitter
@@ -389,6 +390,25 @@ import { RedditShareBtn } from "dv-social-share";
 | :----------- | :------ | :------ | :----------------------------------------------- | :------- |
 | url          | string  |         | The URL of the to be page.                       | ✅       |
 | title        | string  |         | Title of the shared page.                        | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
+
+---
+
+## RefindShare
+
+#### 👨‍💻 Code
+
+```js copy
+import { RefindShareBtn } from "dv-social-share";
+
+<RefindShareBtn url="https://dv-social-share.vercel.app" />;
+```
+
+#### 📖 RefindShareBtn Props
+
+| Props        | Type    | Default | Description                                      | Required |
+| :----------- | :------ | :------ | :----------------------------------------------- | :------- |
+| url          | string  |         | The URL of the to be page.                       | ✅       |
 | openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
 
 ---
