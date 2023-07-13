@@ -21,13 +21,21 @@ const MakeShareButton = (name, url, Icon, openShareDialogOnClick) => {
     {
       type: "button",
       "aria-label": `Share-${name}`,
+      title: name,
       onClick: handleOnClick,
       style: { border: "none", background: "transparent" },
     },
-    createElement(Icon, {
+    createElement("img", {
+      src: Icon,
+      alt: `${name} Icon`,
+      "aria-label": `${name}Icon`,
       width: 32,
       height: 32,
-      "aria-label": `${name}Icon`,
+      style: {
+        cursor: "pointer",
+        backgroundColor: "transparent",
+        mixBlendMode: "darken",
+      },
     })
   );
 };

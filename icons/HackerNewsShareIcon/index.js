@@ -1,20 +1,4 @@
-import { createElement } from "react";
-
-// HackerNews Icon
-import { HackerNewsShareIconBase64 } from "./HackerNewsBase64Icon";
-
-const HackerNewsShareIcon = () => {
-  return createElement("img", {
-    src: HackerNewsShareIconBase64,
-    alt: "HackerNews Icon",
-    width: 32,
-    height: 32,
-    style: {
-      cursor: "pointer",
-      backgroundColor: "transparent",
-      mixBlendMode: "darken",
-    },
-  });
-};
+const HackerNewsShareIcon =
+  "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxuczp4PSJuc19leHRlbmQ7IiB4bWxuczppPSJuc19haTsiIHhtbG5zOmdyYXBoPSJuc19ncmFwaHM7IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ2LjcgNDciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ2LjcgNDc7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CiAgLnN0MHtmaWxsOiNGRjVBMDA7fQoJLnN0MXtmaWxsOiNGRkZFRkU7fQogPC9zdHlsZT4KIDxtZXRhZGF0YT4KICA8c2Z3IHhtbG5zPSJuc19zZnc7Ij4KICAgPHNsaWNlcz4KICAgPC9zbGljZXM+CiAgIDxzbGljZVNvdXJjZUJvdW5kcyBib3R0b21MZWZ0T3JpZ2luPSJ0cnVlIiBoZWlnaHQ9IjQ3IiB3aWR0aD0iNDYuNyIgeD0iLTI4LjIiIHk9IjU2LjQiPgogICA8L3NsaWNlU291cmNlQm91bmRzPgogIDwvc2Z3PgogPC9tZXRhZGF0YT4KIDxnPgogIDxnPgogICA8Zz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLDBoNDYuN3Y0N0gwVjB6Ij4KICAgIDwvcGF0aD4KICAgIDxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMy44LDExLjdjMC4yLDAsMC40LTAuMSwwLjYtMC4xYzEsMCwyLDAsMywwLjFjMC4yLDAsMC4yLDAuMSwwLjMsMC4yYzEuNSwzLjEsMyw2LjMsNC42LDkuNQoJCQkJYzAuMywwLjcsMC42LDEuMywxLDEuOWMwLjMtMC41LDAuNi0xLDAuOS0xLjZjMS43LTMuNCwzLjQtNi43LDUuMS0xMC4xYzEuMSwwLDIuMi0wLjEsMy40LDAuMWMtMC4yLDAuNy0wLjYsMS4yLTAuOSwxLjgKCQkJCWMtMi4yLDQuMy00LjUsOC42LTYuOCwxMi45Yy0wLjEsMC4yLTAuMSwwLjMtMC4xLDAuNWMwLDMuMSwwLDYuMiwwLDkuMmMtMS4xLDAtMi4yLDAtMy4zLDBjMC0zLDAtNiwwLTljMC0wLjMsMC0wLjctMC4yLTEKCQkJCWMtMi4xLTMuOS00LjEtNy44LTYuMi0xMS44QzE0LjgsMTMuNSwxNC4zLDEyLjYsMTMuOCwxMS43eiI+CiAgICA8L3BhdGg+CiAgIDwvZz4KICA8L2c+CiA8L2c+Cjwvc3ZnPg==";
 
 export default HackerNewsShareIcon;

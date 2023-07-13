@@ -1,20 +1,4 @@
-import { createElement } from "react";
-
-// HackerNews Icon
-import { TumblrShareIconBase64 } from "./TumblrShareBase64Icon";
-
-const TumblrShareIcon = () => {
-  return createElement("img", {
-    src: TumblrShareIconBase64,
-    alt: "Tumblr Icon",
-    width: 32,
-    height: 32,
-    style: {
-      cursor: "pointer",
-      backgroundColor: "transparent",
-      mixBlendMode: "darken",
-    },
-  });
-};
+const TumblrShareIcon =
+  "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTAuMiAxNTkuMzsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDkwLjIgMTU5LjMiIHg9IjBweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeT0iMHB4Ij4KIDxwYXRoIGQ9Ik02My42LDE1OS4zYy0yNCwwLTQxLjgtMTIuMy00MS44LTQxLjhWNzAuM0gwVjQ0LjdDMjQsMzguNSwzNCwxNy45LDM1LjEsMEg2MHY0MC42aDI5djI5LjdINjB2NDEuMQ0KCWMwLDEyLjMsNi4yLDE2LjYsMTYuMSwxNi42aDE0LjF2MzEuM0g2My42eiI+CiA8L3BhdGg+Cjwvc3ZnPg==";
 
 export default TumblrShareIcon;
