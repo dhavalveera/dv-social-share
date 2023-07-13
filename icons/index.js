@@ -9,6 +9,7 @@ export { default as HackerNewsShareIcon } from "./HackerNewsShareIcon";
 export { default as InstaPaperShareIcon } from "./InstaPaperShareIcon";
 export { default as LineShareIcon } from "./LineShareIcon";
 export { default as LinkedInShareIcon } from "./LinkedInShareIcon";
+export { default as LiveJournalShareIcon } from "./LiveJournalShareIcon";
 export { default as PinterestShareIcon } from "./PinterestShareIcon";
 export { default as PocketShareIcon } from "./PocketShareIcon";
 export { default as RedditShareIcon } from "./RedditShareIcon";
