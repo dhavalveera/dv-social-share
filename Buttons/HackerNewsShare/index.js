@@ -1,33 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { HackerNewsShareIcon } from "../../icons";
+import { HackerNewsShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateHackerNewsLink = (url, { title }) => {
-  return `http://news.ycombinator.com/submitlink${generateQueryParams({
-    url,
-    text: title,
-  })}`;
-};
+  return `http://news.ycombinator.com/submitlink${generateQueryParams({ url, text: title })}`
+}
 
 const HackerNewsShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "HackerNews",
-    generateHackerNewsLink(url, { title }),
-    HackerNewsShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('HackerNews', generateHackerNewsLink(url, { title }), HackerNewsShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 HackerNewsShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -38,6 +29,6 @@ HackerNewsShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default HackerNewsShareBtn;
+export default HackerNewsShareBtn

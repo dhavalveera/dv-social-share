@@ -1,30 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { RefindShareIcon } from "../../icons";
+import { RefindShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
-const generateRefindLink = (url) => {
-  return `https://refind.com/${generateQueryParams({ url })}`;
-};
+const generateRefindLink = url => {
+  return `https://refind.com/${generateQueryParams({ url })}`
+}
 
 const RefindShareBtn = ({ url, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "Refind",
-    generateRefindLink(url),
-    RefindShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('Refind', generateRefindLink(url), RefindShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 RefindShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -34,6 +28,6 @@ RefindShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default RefindShareBtn;
+export default RefindShareBtn

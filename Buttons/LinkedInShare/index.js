@@ -1,43 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { LinkedInShareIcon } from "../../icons";
+import { LinkedInShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateLinkedInLink = (url, { title, summary, source }) => {
-  return `https://linkedin.com/sharing/share-offsite${generateQueryParams({
-    url,
-    mini: "true",
-    title,
-    summary,
-    source,
-  })}`;
-};
+  return `https://linkedin.com/sharing/share-offsite${generateQueryParams({ url, mini: 'true', title, summary, source })}`
+}
 
-const LinkedInShareBtn = ({
-  url,
-  title,
-  summary,
-  source,
-  openInNewTab,
-  imgConfig,
-}) =>
-  MakeShareButton(
-    "LinkedIn",
-    generateLinkedInLink(url, { title, summary, source }),
-    LinkedInShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+const LinkedInShareBtn = ({ url, title, summary, source, openInNewTab, imgConfig }) =>
+  MakeShareButton('LinkedIn', generateLinkedInLink(url, { title, summary, source }), LinkedInShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 LinkedInShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -50,6 +31,6 @@ LinkedInShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default LinkedInShareBtn;
+export default LinkedInShareBtn

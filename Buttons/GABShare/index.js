@@ -1,33 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { GABShareIcon } from "../../icons";
+import { GABShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateGABLink = (url, { title }) => {
-  return `https://gab.com/compose${generateQueryParams({
-    url,
-    text: title,
-  })}`;
-};
+  return `https://gab.com/compose${generateQueryParams({ url, text: title })}`
+}
 
 const GABShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "GAB",
-    generateGABLink(url, { title }),
-    GABShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('GAB', generateGABLink(url, { title }), GABShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 GABShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -38,6 +29,6 @@ GABShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default GABShareBtn;
+export default GABShareBtn

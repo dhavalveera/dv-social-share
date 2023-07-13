@@ -1,33 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { DiggIcon } from "../../icons";
+import { DiggIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateDiggLink = (url, { title }) => {
-  return `http://digg.com/submit${generateQueryParams({
-    url,
-    title,
-  })}`;
-};
+  return `http://digg.com/submit${generateQueryParams({ url, title })}`
+}
 
 const DiggShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "Digg",
-    generateDiggLink(url, { title }),
-    DiggIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('Digg', generateDiggLink(url, { title }), DiggIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 DiggShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -38,6 +29,6 @@ DiggShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default DiggShareBtn;
+export default DiggShareBtn

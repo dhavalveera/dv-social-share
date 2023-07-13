@@ -1,40 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { EmailIcon } from "../../icons";
+import { EmailIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, openShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, openShareDialogOnClick } from '../../constants'
 
-const generateEmailLink = (url, { subject, body, separator = " :: " }) => {
-  return `mailto:${generateQueryParams({
-    subject,
-    body: body ? body + separator + url : url,
-  })}`;
-};
+const generateEmailLink = (url, { subject, body, separator = ' :: ' }) => {
+  return `mailto:${generateQueryParams({ subject, body: body ? body + separator + url : url })}`
+}
 
-const EmailShareBtn = ({
-  url,
-  subject,
-  body,
-  separator,
-  openInNewTab,
-  imgConfig,
-}) =>
-  MakeShareButton(
-    "Email",
-    generateEmailLink(url, { subject, body, separator }),
-    EmailIcon,
-    openInNewTab || openShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+const EmailShareBtn = ({ url, subject, body, separator, openInNewTab, imgConfig }) =>
+  MakeShareButton('Email', generateEmailLink(url, { subject, body, separator }), EmailIcon, openInNewTab || openShareDialogOnClick, imgConfig || defaultImgConfig)
 
 EmailShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -47,6 +31,6 @@ EmailShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default EmailShareBtn;
+export default EmailShareBtn

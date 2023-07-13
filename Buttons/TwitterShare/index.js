@@ -1,47 +1,30 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { TwitterShareIcon } from "../../icons";
+import { TwitterShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
-const generateTwitterLink = (
-  url,
-  { title, via, hashTags = [], related = [] }
-) => {
+const generateTwitterLink = (url, { title, via, hashTags = [], related = [] }) => {
   return `https://twitter.com/intent/tweet${generateQueryParams({
     url,
     text: title,
     via,
-    hashtags: hashTags.length > 0 ? hashTags.join(",") : undefined,
-    related: related.length > 0 ? related.join(",") : undefined,
-  })}`;
-};
+    hashtags: hashTags.length > 0 ? hashTags.join(',') : undefined,
+    related: related.length > 0 ? related.join(',') : undefined,
+  })}`
+}
 
-const TwitterShareBtn = ({
-  url,
-  title,
-  via,
-  hashTags,
-  related,
-  openInNewTab,
-  imgConfig,
-}) =>
-  MakeShareButton(
-    "Twitter",
-    generateTwitterLink(url, { title, via, hashTags, related }),
-    TwitterShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+const TwitterShareBtn = ({ url, title, via, hashTags, related, openInNewTab, imgConfig }) =>
+  MakeShareButton('Twitter', generateTwitterLink(url, { title, via, hashTags, related }), TwitterShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 TwitterShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -55,6 +38,6 @@ TwitterShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default TwitterShareBtn;
+export default TwitterShareBtn

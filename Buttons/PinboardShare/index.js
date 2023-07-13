@@ -1,40 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { PinboardShareIcon } from "../../icons";
+import { PinboardShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generatePinboardLink = (url, { title, description }) => {
-  return `https://pinboard.in/add${generateQueryParams({
-    url,
-    title,
-    description,
-  })}`;
-};
+  return `https://pinboard.in/add${generateQueryParams({ url, title, description })}`
+}
 
-const PinboardShareBtn = ({
-  url,
-  title,
-  description,
-  openInNewTab,
-  imgConfig,
-}) =>
-  MakeShareButton(
-    "Pinboard",
-    generatePinboardLink(url, { title, description }),
-    PinboardShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+const PinboardShareBtn = ({ url, title, description, openInNewTab, imgConfig }) =>
+  MakeShareButton('Pinboard', generatePinboardLink(url, { title, description }), PinboardShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 PinboardShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -46,6 +30,6 @@ PinboardShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default PinboardShareBtn;
+export default PinboardShareBtn

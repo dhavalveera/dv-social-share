@@ -1,33 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { LineShareIcon } from "../../icons";
+import { LineShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateLineLink = (url, { title }) => {
-  return `https://social-plugins.line.me/lineit/share${generateQueryParams({
-    url,
-    text: title,
-  })}`;
-};
+  return `https://social-plugins.line.me/lineit/share${generateQueryParams({ url, text: title })}`
+}
 
 const LineShareBtn = ({ url, title, description, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "Line",
-    generateLineLink(url, { title, description }),
-    LineShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('Line', generateLineLink(url, { title, description }), LineShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 LineShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -38,6 +29,6 @@ LineShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default LineShareBtn;
+export default LineShareBtn
