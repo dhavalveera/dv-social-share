@@ -1,21 +1,4 @@
-// React
-import { createElement } from "react";
-
-// Email Icon
-import { DiggShareBase64Icon } from "./DiggShareBase64Icon";
-
-const DiggIcon = () => {
-  return createElement("img", {
-    src: DiggShareBase64Icon,
-    alt: "Diff Icon",
-    width: 32,
-    height: 32,
-    style: {
-      cursor: "pointer",
-      backgroundColor: "transparent",
-      mixBlendMode: "darken",
-    },
-  });
-};
+const DiggIcon =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAbCAYAAADszNYXAAAAAXNSR0IArs4c6QAAALhJREFUWEftVzsOgCAMlclRHdX7X4kbqHdw0Wji0tSX0hSioYz0w8tr6Sc04MzTeFDxsm7hukMy5NNSdgN5Ow7ekmriq07mMxIqdq1mXvxCRsXAfUr0nqTaWPpEWBz8ww6KijaadTHf9UMbY9y1TaqUHZvzDp4kq7ZKITtnXlJtnHk6mHGV4dcfVttQvEklDHI+20iqjTYV4WyTECUTVe3iztnBZcQELXHyefDFlpFS7P4m5515QUqc5E9qfPgNAFwAAAAASUVORK5CYII=";
 
 export default DiggIcon;
