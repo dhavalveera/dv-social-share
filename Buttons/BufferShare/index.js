@@ -1,33 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { BufferIcon } from "../../icons";
+import { BufferIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateBufferLink = (url, { title }) => {
-  return `https://publish.buffer.com/compose${generateQueryParams({
-    text: title,
-    url,
-  })}`;
-};
+  return `https://publish.buffer.com/compose${generateQueryParams({ text: title, url })}`
+}
 
 const BufferShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "Buffer",
-    generateBufferLink(url, { title }),
-    BufferIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('Buffer', generateBufferLink(url, { title }), BufferIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 BufferShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -38,6 +29,6 @@ BufferShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default BufferShareBtn;
+export default BufferShareBtn

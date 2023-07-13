@@ -1,33 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { LiveJournalShareIcon } from "../../icons";
+import { LiveJournalShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateLiveJournalLink = (url, { title }) => {
-  return `https://www.livejournal.com/update.bml${generateQueryParams({
-    event: url,
-    subject: title,
-  })}`;
-};
+  return `https://www.livejournal.com/update.bml${generateQueryParams({ event: url, subject: title })}`
+}
 
 const LiveJournalShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "LiveJournal",
-    generateLiveJournalLink(url, { title }),
-    LiveJournalShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('LiveJournal', generateLiveJournalLink(url, { title }), LiveJournalShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 LiveJournalShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -38,6 +29,6 @@ LiveJournalShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default LiveJournalShareBtn;
+export default LiveJournalShareBtn

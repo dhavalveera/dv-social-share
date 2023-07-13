@@ -1,34 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams, isMobileOrTablet } from "../../utils";
+import { generateQueryParams, isMobileOrTablet } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { WhatsAppShareIcon } from "../../icons";
+import { WhatsAppShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
-const generateWhatsAppLink = (url, { title, separator = " :: " }) => {
-  return `https://${
-    isMobileOrTablet() ? "api" : "web"
-  }.whatsapp.com/send${generateQueryParams({
-    text: title ? title + separator + url : url,
-  })}`;
-};
+const generateWhatsAppLink = (url, { title, separator = ' :: ' }) => {
+  return `https://${isMobileOrTablet() ? 'api' : 'web'}.whatsapp.com/send${generateQueryParams({ text: title ? title + separator + url : url })}`
+}
 
 const WhatsAppShareBtn = ({ url, title, separator, openInNewTab, imgConfig }) =>
-  MakeShareButton(
-    "WhatsApp",
-    generateWhatsAppLink(url, { title, separator }),
-    WhatsAppShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+  MakeShareButton('WhatsApp', generateWhatsAppLink(url, { title, separator }), WhatsAppShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 WhatsAppShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -40,6 +30,6 @@ WhatsAppShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default WhatsAppShareBtn;
+export default WhatsAppShareBtn

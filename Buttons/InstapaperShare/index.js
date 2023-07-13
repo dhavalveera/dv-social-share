@@ -1,40 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { InstaPaperShareIcon } from "../../icons";
+import { InstaPaperShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateInstapaperLink = (url, { title, description }) => {
-  return `http://www.instapaper.com/hello2${generateQueryParams({
-    url,
-    title,
-    description,
-  })}`;
-};
+  return `http://www.instapaper.com/hello2${generateQueryParams({ url, title, description })}`
+}
 
-const InstapaperShareBtn = ({
-  url,
-  title,
-  description,
-  openInNewTab,
-  imgConfig,
-}) =>
-  MakeShareButton(
-    "Instapaper",
-    generateInstapaperLink(url, { title, description }),
-    InstaPaperShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+const InstapaperShareBtn = ({ url, title, description, openInNewTab, imgConfig }) =>
+  MakeShareButton('Instapaper', generateInstapaperLink(url, { title, description }), InstaPaperShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 InstapaperShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -46,6 +30,6 @@ InstapaperShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default InstapaperShareBtn;
+export default InstapaperShareBtn

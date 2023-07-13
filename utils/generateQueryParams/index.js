@@ -1,10 +1,7 @@
-export const generateQueryParams = (object) => {
+export const generateQueryParams = object => {
   const params = Object.entries(object)
     .filter(([, value]) => value !== undefined && value !== null)
-    .map(
-      ([key, value]) =>
-        `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`
-    );
+    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`)
 
-  return params.length > 0 ? `?${params.join("&")}` : "";
-};
+  return params.length > 0 ? `?${params.join('&')}` : ''
+}

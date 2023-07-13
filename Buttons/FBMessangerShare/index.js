@@ -1,42 +1,24 @@
 // PropTypes
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 
 // Utils
-import { generateQueryParams } from "../../utils";
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
-import MakeShareButton from "../../ShareButton";
+import MakeShareButton from '../../ShareButton'
 
 // Icon
-import { FBMessangerIcon } from "../../icons";
+import { FBMessangerIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateFBMessangerLink = (url, { appId, redirectUri, to }) => {
-  return `https://www.facebook.com/dialog/send${generateQueryParams({
-    link: url,
-    redirect_uri: redirectUri || url,
-    app_id: appId,
-    to,
-  })}`;
-};
+  return `https://www.facebook.com/dialog/send${generateQueryParams({ link: url, redirect_uri: redirectUri || url, app_id: appId, to })}`
+}
 
-const FBMessangerShareBtn = ({
-  url,
-  appId,
-  redirectUri,
-  to,
-  openInNewTab,
-  imgConfig,
-}) =>
-  MakeShareButton(
-    "Facebook Messanger",
-    generateFBMessangerLink(url, { appId, redirectUri, to }),
-    FBMessangerIcon,
-    openInNewTab || dontOpenShareDialogOnClick,
-    imgConfig || defaultImgConfig
-  );
+const FBMessangerShareBtn = ({ url, appId, redirectUri, to, openInNewTab, imgConfig }) =>
+  MakeShareButton('Facebook Messanger', generateFBMessangerLink(url, { appId, redirectUri, to }), FBMessangerIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 FBMessangerShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
@@ -49,6 +31,6 @@ FBMessangerShareBtn.propTypes = {
     height: PropTypes.number,
     bgColor: PropTypes.string,
   }),
-};
+}
 
-export default FBMessangerShareBtn;
+export default FBMessangerShareBtn
