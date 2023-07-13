@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { WhatsAppShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateWhatsAppLink = (url, { title, separator = " :: " }) => {
   return `https://${
@@ -21,12 +21,13 @@ const generateWhatsAppLink = (url, { title, separator = " :: " }) => {
   })}`;
 };
 
-const WhatsAppShareBtn = ({ url, title, separator, openInNewTab }) =>
+const WhatsAppShareBtn = ({ url, title, separator, openInNewTab, imgConfig }) =>
   MakeShareButton(
     "WhatsApp",
     generateWhatsAppLink(url, { title, separator }),
     WhatsAppShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 WhatsAppShareBtn.propTypes = {
@@ -34,6 +35,11 @@ WhatsAppShareBtn.propTypes = {
   title: PropTypes.string,
   separator: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default WhatsAppShareBtn;

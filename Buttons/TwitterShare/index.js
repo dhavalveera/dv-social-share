@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { TwitterShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateTwitterLink = (
   url,
@@ -33,12 +33,14 @@ const TwitterShareBtn = ({
   hashTags,
   related,
   openInNewTab,
+  imgConfig,
 }) =>
   MakeShareButton(
     "Twitter",
     generateTwitterLink(url, { title, via, hashTags, related }),
     TwitterShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 TwitterShareBtn.propTypes = {
@@ -48,6 +50,11 @@ TwitterShareBtn.propTypes = {
   hashTags: PropTypes.array,
   related: PropTypes.array,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default TwitterShareBtn;

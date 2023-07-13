@@ -3,7 +3,13 @@ import { createElement } from "react";
 // Utils
 import { CustomWindow, getCenterPosition } from "../utils";
 
-const MakeShareButton = (name, url, Icon, openShareDialogOnClick) => {
+const MakeShareButton = (
+  name,
+  url,
+  Icon,
+  openShareDialogOnClick,
+  imgConfig
+) => {
   const handleOnClick = (e) => {
     e.preventDefault();
 
@@ -29,12 +35,16 @@ const MakeShareButton = (name, url, Icon, openShareDialogOnClick) => {
       src: Icon,
       alt: `${name} Icon`,
       "aria-label": `${name}Icon`,
-      width: 32,
-      height: 32,
+      width: imgConfig.width === 32 ? 32 : imgConfig.width,
+      height: imgConfig.height === 32 ? 32 : imgConfig.height,
       style: {
         cursor: "pointer",
-        backgroundColor: "transparent",
-        mixBlendMode: "darken",
+        backgroundColor:
+          imgConfig.bgColor === "transparent"
+            ? "transparent"
+            : imgConfig.bgColor,
+        mixBlendMode:
+          imgConfig.bgColor === "transparent" ? "darken" : "color-burn",
       },
     })
   );

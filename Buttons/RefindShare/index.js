@@ -11,23 +11,29 @@ import MakeShareButton from "../../ShareButton";
 import { RefindShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateRefindLink = (url) => {
   return `https://refind.com/${generateQueryParams({ url })}`;
 };
 
-const RefindShareBtn = ({ url, openInNewTab }) =>
+const RefindShareBtn = ({ url, openInNewTab, imgConfig }) =>
   MakeShareButton(
     "Refind",
     generateRefindLink(url),
     RefindShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 RefindShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default RefindShareBtn;

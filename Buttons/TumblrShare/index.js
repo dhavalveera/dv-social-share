@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { TumblrShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateTumblrLink = (url, { title, caption, tags, postTypes }) => {
   return `https://www.tumblr.com/widgets/share/tool${generateQueryParams({
@@ -30,12 +30,14 @@ const TumblrShareBtn = ({
   tags,
   postTypes,
   openInNewTab,
+  imgConfig,
 }) =>
   MakeShareButton(
     "Tumblr",
     generateTumblrLink(url, { title, caption, tags, postTypes }),
     TumblrShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 TumblrShareBtn.propTypes = {
@@ -45,6 +47,11 @@ TumblrShareBtn.propTypes = {
   tags: PropTypes.array,
   postTypes: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default TumblrShareBtn;

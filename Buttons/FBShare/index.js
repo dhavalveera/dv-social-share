@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { FBShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateFBLink = (url, { quote, hashTags }) => {
   return `https://www.facebook.com/sharer/sharer.php${generateQueryParams({
@@ -21,12 +21,13 @@ const generateFBLink = (url, { quote, hashTags }) => {
   })}`;
 };
 
-const FBShareBtn = ({ url, quote, hashTags, openInNewTab }) =>
+const FBShareBtn = ({ url, quote, hashTags, openInNewTab, imgConfig }) =>
   MakeShareButton(
     "Facebook",
     generateFBLink(url, { quote, hashTags }),
     FBShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 FBShareBtn.propTypes = {
@@ -34,6 +35,11 @@ FBShareBtn.propTypes = {
   quote: PropTypes.string,
   hashTag: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default FBShareBtn;

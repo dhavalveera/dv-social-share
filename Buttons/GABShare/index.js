@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { GABShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateGABLink = (url, { title }) => {
   return `https://gab.com/compose${generateQueryParams({
@@ -20,18 +20,24 @@ const generateGABLink = (url, { title }) => {
   })}`;
 };
 
-const GABShareBtn = ({ url, title, openInNewTab }) =>
+const GABShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
   MakeShareButton(
     "GAB",
     generateGABLink(url, { title }),
     GABShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 GABShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default GABShareBtn;
