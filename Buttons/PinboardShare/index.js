@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { PinboardShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generatePinboardLink = (url, { title, description }) => {
   return `https://pinboard.in/add${generateQueryParams({
@@ -21,12 +21,19 @@ const generatePinboardLink = (url, { title, description }) => {
   })}`;
 };
 
-const PinboardShareBtn = ({ url, title, description, openInNewTab }) =>
+const PinboardShareBtn = ({
+  url,
+  title,
+  description,
+  openInNewTab,
+  imgConfig,
+}) =>
   MakeShareButton(
     "Pinboard",
     generatePinboardLink(url, { title, description }),
     PinboardShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 PinboardShareBtn.propTypes = {
@@ -34,6 +41,11 @@ PinboardShareBtn.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default PinboardShareBtn;

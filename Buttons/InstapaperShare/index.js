@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { InstaPaperShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateInstapaperLink = (url, { title, description }) => {
   return `http://www.instapaper.com/hello2${generateQueryParams({
@@ -21,12 +21,19 @@ const generateInstapaperLink = (url, { title, description }) => {
   })}`;
 };
 
-const InstapaperShareBtn = ({ url, title, description, openInNewTab }) =>
+const InstapaperShareBtn = ({
+  url,
+  title,
+  description,
+  openInNewTab,
+  imgConfig,
+}) =>
   MakeShareButton(
     "Instapaper",
     generateInstapaperLink(url, { title, description }),
     InstaPaperShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 InstapaperShareBtn.propTypes = {
@@ -34,6 +41,11 @@ InstapaperShareBtn.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default InstapaperShareBtn;

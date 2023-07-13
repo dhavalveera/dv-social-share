@@ -11,24 +11,30 @@ import MakeShareButton from "../../ShareButton";
 import { TelegramShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateTelegramLink = (url, { title }) => {
   return `https://t.me/share/url${generateQueryParams({ url, title })}`;
 };
 
-const TelegramShareBtn = ({ url, title, openInNewTab }) =>
+const TelegramShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
   MakeShareButton(
     "Telegram",
     generateTelegramLink(url, { title }),
     TelegramShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 TelegramShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default TelegramShareBtn;

@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { HackerNewsShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateHackerNewsLink = (url, { title }) => {
   return `http://news.ycombinator.com/submitlink${generateQueryParams({
@@ -20,18 +20,24 @@ const generateHackerNewsLink = (url, { title }) => {
   })}`;
 };
 
-const HackerNewsShareBtn = ({ url, title, openInNewTab }) =>
+const HackerNewsShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
   MakeShareButton(
     "HackerNews",
     generateHackerNewsLink(url, { title }),
     HackerNewsShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 HackerNewsShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default HackerNewsShareBtn;

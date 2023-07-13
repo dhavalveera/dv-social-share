@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { LinkedInShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateLinkedInLink = (url, { title, summary, source }) => {
   return `https://linkedin.com/sharing/share-offsite${generateQueryParams({
@@ -23,12 +23,20 @@ const generateLinkedInLink = (url, { title, summary, source }) => {
   })}`;
 };
 
-const LinkedInShareBtn = ({ url, title, summary, source, openInNewTab }) =>
+const LinkedInShareBtn = ({
+  url,
+  title,
+  summary,
+  source,
+  openInNewTab,
+  imgConfig,
+}) =>
   MakeShareButton(
     "LinkedIn",
     generateLinkedInLink(url, { title, summary, source }),
     LinkedInShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 LinkedInShareBtn.propTypes = {
@@ -37,6 +45,11 @@ LinkedInShareBtn.propTypes = {
   summary: PropTypes.string,
   source: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default LinkedInShareBtn;

@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { EmailIcon } from "../../icons";
 
 // Constants
-import { openShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, openShareDialogOnClick } from "../../constants";
 
 const generateEmailLink = (url, { subject, body, separator = " :: " }) => {
   return `mailto:${generateQueryParams({
@@ -20,12 +20,20 @@ const generateEmailLink = (url, { subject, body, separator = " :: " }) => {
   })}`;
 };
 
-const EmailShareBtn = ({ url, subject, body, separator, openInNewTab }) =>
+const EmailShareBtn = ({
+  url,
+  subject,
+  body,
+  separator,
+  openInNewTab,
+  imgConfig,
+}) =>
   MakeShareButton(
     "Email",
     generateEmailLink(url, { subject, body, separator }),
     EmailIcon,
-    openInNewTab || openShareDialogOnClick
+    openInNewTab || openShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 EmailShareBtn.propTypes = {
@@ -34,6 +42,11 @@ EmailShareBtn.propTypes = {
   body: PropTypes.string,
   separator: PropTypes.string,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default EmailShareBtn;

@@ -11,7 +11,7 @@ import MakeShareButton from "../../ShareButton";
 import { VKShareIcon } from "../../icons";
 
 // Constants
-import { dontOpenShareDialogOnClick } from "../../constants";
+import { defaultImgConfig, dontOpenShareDialogOnClick } from "../../constants";
 
 const generateVKLink = (url, { title, image, noParse, noVkLinks }) => {
   return `https://vk.com/share.php${generateQueryParams({
@@ -23,12 +23,21 @@ const generateVKLink = (url, { title, image, noParse, noVkLinks }) => {
   })}`;
 };
 
-const VKShareBtn = ({ url, title, image, noParse, noVkLinks, openInNewTab }) =>
+const VKShareBtn = ({
+  url,
+  title,
+  image,
+  noParse,
+  noVkLinks,
+  openInNewTab,
+  imgConfig,
+}) =>
   MakeShareButton(
     "VK",
     generateVKLink(url, { title, image, noParse, noVkLinks }),
     VKShareIcon,
-    openInNewTab || dontOpenShareDialogOnClick
+    openInNewTab || dontOpenShareDialogOnClick,
+    imgConfig || defaultImgConfig
   );
 
 VKShareBtn.propTypes = {
@@ -38,6 +47,11 @@ VKShareBtn.propTypes = {
   noParse: PropTypes.bool,
   noVkLinks: PropTypes.bool,
   openInNewTab: PropTypes.bool,
+  imgConfig: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    bgColor: PropTypes.string,
+  }),
 };
 
 export default VKShareBtn;
