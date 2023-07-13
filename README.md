@@ -21,6 +21,7 @@ Social media share buttons for your next React.js, Next.js apps.
   - Instapaper
   - Line
   - LinkedIn
+  - LiveJournal
   - Pinterest
   - Pocket
   - Reddit
@@ -96,6 +97,7 @@ import { DiggShareBtn } from "dv-social-share";
 
 ```js
 import { EmailShareBtn } from "dv-social-share";
+
 <EmailShareBtn url="https://dv-social-share.vercel.app" />;
 ```
 
@@ -139,6 +141,7 @@ import { FBMessangerShareBtn } from "dv-social-share";
 
 ```js
 import { FBShareBtn } from "dv-social-share";
+
 <FBShareBtn
   url="https://dv-social-share.vercel.app"
   quote="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -208,6 +211,7 @@ import { GABShareBtn } from "dv-social-share";
 
 ```js
 import { HackerNewsShareBtn } from "dv-social-share";
+
 <HackerNewsShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -230,6 +234,7 @@ import { HackerNewsShareBtn } from "dv-social-share";
 
 ```js
 import { InstapaperShareBtn } from "dv-social-share";
+
 <InstapaperShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -253,6 +258,7 @@ import { InstapaperShareBtn } from "dv-social-share";
 
 ```js
 import { LineShareBtn } from "dv-social-share";
+
 <LineShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -275,6 +281,7 @@ import { LineShareBtn } from "dv-social-share";
 
 ```js
 import { LinkedInShareBtn } from "dv-social-share";
+
 <LinkedInShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -293,12 +300,36 @@ import { LinkedInShareBtn } from "dv-social-share";
 
 ---
 
+## LiveJournalShare
+
+#### 👨‍💻 Code
+
+```js
+import { LiveJournalShareBtn } from "dv-social-share";
+
+<LiveJournalShareBtn
+  url="https://dv-social-share.vercel.app"
+  title="Dhaval Vira"
+/>;
+```
+
+#### 📖 LiveJournalShareBtn Props
+
+| Props        | Type    | Default | Description                                      | Required |
+| :----------- | :------ | :------ | :----------------------------------------------- | :------- |
+| url          | string  |         | The URL of the page to be shared.                | ✅       |
+| title        | string  |         | the Title to be shared.                          | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`. | ❌       |
+
+---
+
 ## PinterestShare
 
 #### 👨‍💻 Code
 
 ```js
 import { PinterestShareBtn } from "dv-social-share";
+
 <PinterestShareBtn
   url="https://dv-social-share.vercel.app"
   media="https://dv-social-share.vercel.app/image.svg"
@@ -322,6 +353,7 @@ import { PinterestShareBtn } from "dv-social-share";
 
 ```js
 import { PocketShareBtn } from "dv-social-share";
+
 <PocketShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -344,6 +376,7 @@ import { PocketShareBtn } from "dv-social-share";
 
 ```js copy
 import { RedditShareBtn } from "dv-social-share";
+
 <RedditShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -366,6 +399,7 @@ import { RedditShareBtn } from "dv-social-share";
 
 ```js copy
 import { TelegramShareBtn } from "dv-social-share";
+
 <TelegramShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -388,6 +422,7 @@ import { TelegramShareBtn } from "dv-social-share";
 
 ```js copy
 import { TumblrShareBtn } from "dv-social-share";
+
 <TumblrShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -413,6 +448,7 @@ import { TumblrShareBtn } from "dv-social-share";
 
 ```js copy
 import { TwitterShareBtn } from "dv-social-share";
+
 <TwitterShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -438,6 +474,7 @@ import { TwitterShareBtn } from "dv-social-share";
 
 ```js copy
 import { VKShareBtn } from "dv-social-share";
+
 <VKShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
@@ -463,6 +500,7 @@ import { VKShareBtn } from "dv-social-share";
 
 ```js copy
 import { WhatsAppShareBtn } from "dv-social-share";
+
 <WhatsAppShareBtn
   url="https://dv-social-share.vercel.app"
   title="dv-social-share is a social share buttons for your next React.js & Next.js apps."
