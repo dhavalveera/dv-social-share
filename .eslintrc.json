@@ -1,0 +1,89 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier", "plugin:prettier/recommended"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
+    "jsx-a11y/anchor-is-valid": "off", // Next.js uses its own internal link system
+    "react/require-default-props": "off", // Allow non-defined react props as undefined
+    "react-hooks/exhaustive-deps": "off", // Incorrectly report needed dependency with Next.js router
+    "import/prefer-default-export": "off", // Named export is easier to refactor automatically
+    "import/no-extraneous-dependencies": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/no-duplicates": "error",
+    "import/no-unresolved": "off",
+    "import/named": "error",
+    "import/extensions": ["error", "never", { "svg": "always", "js": "never", "jsx": "never", "json": "always", "css": "always" }],
+    "prettier/prettier": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/state-in-constructor": "off",
+    "react/prop-types": "off",
+    "react/no-access-state-in-setstate": "error",
+    "react/no-array-index-key": "off",
+    "react/no-danger": "error",
+    "react/no-did-mount-set-state": "error",
+    "react/no-did-update-set-state": "error",
+    "react/no-will-update-set-state": "error",
+    "react/no-redundant-should-component-update": "error",
+    "react/no-this-in-sfc": "error",
+    "react/no-typos": "error",
+    "react/no-unused-state": "error",
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "no-useless-call": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-concat": "error",
+    "no-useless-constructor": "error",
+    "no-useless-rename": "error",
+    "no-useless-return": "error",
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "react/jsx-props-no-spreading": "off", // _app.tsx uses spread operator and also, react-hook-form
+    "no-param-reassign": ["error", { "props": false }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "class-methods-use-this": "off",
+
+    // overriding recommended rules
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-console": ["error", { "allow": ["log", "warn", "error", "group", "groupEnd"] }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-underscore-dangle": "off",
+    "react/forbid-prop-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."]
+      },
+      "alias": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
+}
