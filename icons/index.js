@@ -13,6 +13,7 @@ export { default as LiveJournalShareIcon } from "./LiveJournalShareIcon";
 export { default as PinterestShareIcon } from "./PinterestShareIcon";
 export { default as PocketShareIcon } from "./PocketShareIcon";
 export { default as RedditShareIcon } from "./RedditShareIcon";
+export { default as RefindShareIcon } from "./RefindShareIcon";
 export { default as TelegramShareIcon } from "./TelegramShareIcon";
 export { default as TumblrShareIcon } from "./TumblrShareIcon";
 export { default as TwitterShareIcon } from "./TwitterShareIcon";

@@ -13,6 +13,7 @@ export { default as LiveJournalShareBtn } from "./Buttons/LiveJournalShare";
 export { default as PinterestShareBtn } from "./Buttons/PinterestShare";
 export { default as PocketShareBtn } from "./Buttons/PocketShare";
 export { default as RedditShareBtn } from "./Buttons/RedditShare";
+export { default as RefindShareBtn } from "./Buttons/RefindShare";
 export { default as TelegramShareBtn } from "./Buttons/TelegramShare";
 export { default as TumblrShareBtn } from "./Buttons/TumblrShare";
 export { default as TwitterShareBtn } from "./Buttons/TwitterShare";
