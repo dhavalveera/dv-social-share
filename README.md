@@ -8,7 +8,7 @@ Social media share buttons for your next React.js, Next.js apps.
 
 ---
 
-- No dependencies
+- Zero dependencies
 - Share buttons for your next React.js & Next.js app
   - Buffer
   - Digg
