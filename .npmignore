@@ -6,7 +6,17 @@ node_modules
 # *
 # ***
 
-/src
-/supports
-/test
+Buttons
+constants
+icons
+ShareButton
+utils
+.babelrc
+.eslintignore
+.eslintrc.json
 .gitignore
+.prettierignore
+.prettierrc
+CONTRIBUTING.md
+index.js
+rollup.config.js
