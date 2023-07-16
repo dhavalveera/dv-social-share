@@ -2,6 +2,16 @@ name: Manual Release
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number'
+        required: true
+      release_date:
+        description: 'Release date'
+        required: true
+      release_notes:
+        description: 'Release notes'
+        required: true
 
 jobs:
   release:
@@ -13,15 +23,18 @@ jobs:
 
       - name: Set up Environment Variables
         run: |
-          echo "VERSION=${{ env.VERSION }}" >> $GITHUB_ENV
-          echo "RELEASE_DATE=${{ env.RELEASE_DATE }}" >> $GITHUB_ENV
-          echo "RELEASE_NOTES=${{ env.RELEASE_NOTES }}" >> $GITHUB_ENV
+          echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+          echo "RELEASE_DATE=${{ github.event.inputs.release_date }}" >> $GITHUB_ENV
+          echo "RELEASE_NOTES=${{ github.event.inputs.release_notes }}" >> $GITHUB_ENV
 
       - name: Install Dependencies
         run: npm ci
 
       - name: Generate .tar.gz
-        run: npm pack
+        run: |
+          npm run build
+          npm pack
+          mv myproject-*.tgz myproject-${{ github.event.inputs.version }}.tar.gz
 
       - name: Create Release
         id: create_release
@@ -32,13 +45,13 @@ jobs:
           tag_name: ${{ github.sha }}
           release_name: Release ${{ github.sha }}
           body: |
-            Version: ${{ env.VERSION }}
-            Date: ${{ env.RELEASE_DATE }}
+            Version: ${{ github.event.inputs.version }}
+            Date: ${{ github.event.inputs.release_date }}
             Release Notes:
-            ${{ env.RELEASE_NOTES }}
+            ${{ github.event.inputs.release_notes }}
 
       - name: Upload .tar.gz
         uses: actions/upload-artifact@v2
         with:
           name: dv-social-share
-          path: dv-social-share-${{ env.VERSION }}.tgz
+          path: dv-social-share-${{ github.event.inputs.version }}.tar.gz
