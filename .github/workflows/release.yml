@@ -47,7 +47,6 @@ jobs:
         run: |
           npm run build
           npm pack
-          mv dv-social-share-*.tgz dv-social-share-${{ github.event.inputs.version }}.tar.gz
 
       - name: Create Release
         id: create_release
