@@ -1,0 +1,44 @@
+name: Manual Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Environment Variables
+        run: |
+          echo "VERSION=${{ env.VERSION }}" >> $GITHUB_ENV
+          echo "RELEASE_DATE=${{ env.RELEASE_DATE }}" >> $GITHUB_ENV
+          echo "RELEASE_NOTES=${{ env.RELEASE_NOTES }}" >> $GITHUB_ENV
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Generate .tar.gz
+        run: npm pack
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.sha }}
+          release_name: Release ${{ github.sha }}
+          body: |
+            Version: ${{ env.VERSION }}
+            Date: ${{ env.RELEASE_DATE }}
+            Release Notes:
+            ${{ env.RELEASE_NOTES }}
+
+      - name: Upload .tar.gz
+        uses: actions/upload-artifact@v2
+        with:
+          name: dv-social-share
+          path: dv-social-share-${{ env.VERSION }}.tgz
