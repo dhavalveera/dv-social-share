@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version number'
+        description: 'Version Number'
         required: true
       release_date:
-        description: 'Release date'
+        description: 'Release Date'
         required: true
       release_notes:
-        description: 'Release notes'
+        description: 'Release Notes'
         required: true
 
 jobs:
@@ -34,7 +34,7 @@ jobs:
         run: |
           npm run build
           npm pack
-          mv myproject-*.tgz myproject-${{ github.event.inputs.version }}.tar.gz
+          mv dv-social-share-*.tgz dv-social-share-${{ github.event.inputs.version }}.tar.gz
 
       - name: Create Release
         id: create_release
