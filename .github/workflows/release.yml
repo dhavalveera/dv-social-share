@@ -12,6 +12,10 @@ on:
       release_notes:
         description: 'Release notes'
         required: true
+        default: |
+          Add feature 1
+          Fix bug 2
+          Improve feature 3
 
 jobs:
   release:
@@ -19,7 +23,11 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Nodejs Version
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
 
       - name: Set up Environment Variables
         run: |
