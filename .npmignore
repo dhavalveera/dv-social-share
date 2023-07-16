@@ -6,17 +6,5 @@ node_modules
 # *
 # ***
 
-Buttons
-constants
-icons
-ShareButton
-utils
-.babelrc
-.eslintignore
-.eslintrc.json
+/test
 .gitignore
-.prettierignore
-.prettierrc
-CONTRIBUTING.md
-index.js
-rollup.config.js

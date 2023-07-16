@@ -63,7 +63,7 @@ jobs:
             ${{ steps.release_notes.outputs.release_notes }}
 
       - name: Upload .tar.gz
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: dv-social-share
           path: dv-social-share-${{ github.event.inputs.version }}.tar.gz
