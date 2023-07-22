@@ -42,9 +42,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.event.inputs.version }}
-          release_name: Release ${{ github.event.inputs.version }}
+          release_name: ${{ github.event.inputs.version }}
           body: |
-            Version: ${{ github.event.inputs.version }}
             Date: ${{ github.event.inputs.release_date }}
 
       - name: Upload .tar.gz
