@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version number'
+        description: 'Version Number'
         required: true
       release_date:
-        description: 'Release date'
+        description: 'Release Date'
         required: true
 
 jobs:
@@ -17,6 +17,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Nodejs Version
         uses: actions/setup-node@v3
         with:
@@ -30,7 +31,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Generate .tar.gz
+      - name: Generate .tgz
         run: |
           npm run build
           npm pack
@@ -46,8 +47,8 @@ jobs:
           body: |
             Date: ${{ github.event.inputs.release_date }}
 
-      - name: Upload .tar.gz
+      - name: Upload .tgz
         uses: actions/upload-artifact@v3
         with:
           name: dv-social-share
-          path: dv-social-share-${{ github.event.inputs.version }}.tar.gz
+          path: dv-social-share-${{ github.event.inputs.version }}.tgz
