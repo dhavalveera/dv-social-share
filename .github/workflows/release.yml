@@ -9,13 +9,6 @@ on:
       release_date:
         description: 'Release date'
         required: true
-      release_notes:
-        description: 'Release notes'
-        required: true
-        default: |
-          Add feature 1
-          Fix bug 2
-          Improve feature 3
 
 jobs:
   release:
@@ -33,12 +26,6 @@ jobs:
         run: |
           echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
           echo "RELEASE_DATE=${{ github.event.inputs.release_date }}" >> $GITHUB_ENV
-          echo "RELEASE_NOTES=${{ steps.release_notes.outputs.release_notes }}" >> $GITHUB_ENV
-
-      - name: Create Release Notes
-        id: release_notes
-        run: |
-          echo "name=release_notes" >> ${{ github.event.inputs.release_notes }}
 
       - name: Install Dependencies
         run: npm ci
@@ -59,8 +46,6 @@ jobs:
           body: |
             Version: ${{ github.event.inputs.version }}
             Date: ${{ github.event.inputs.release_date }}
-            Release Notes:
-            ${{ steps.release_notes.outputs.release_notes }}
 
       - name: Upload .tar.gz
         uses: actions/upload-artifact@v3
