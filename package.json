@@ -1,6 +1,6 @@
 {
   "name": "dv-social-share",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Social media share buttons for your next apps like React, Next.js, Vue.js, Angular.",
   "publishConfig": {
     "access": "public"
@@ -40,8 +40,8 @@
     "url": "https://github.com/dhavalveera/dv-social-share/issues"
   },
   "engines": {
-    "node": ">=16",
-    "npm": ">=8"
+    "node": ">=14",
+    "npm": ">=6"
   },
   "peerDependencies": {
     "react": ">=17.0.2"

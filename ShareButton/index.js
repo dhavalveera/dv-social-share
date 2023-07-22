@@ -3,6 +3,9 @@ import { createElement } from 'react'
 // Utils
 import { CustomWindow, getCenterPosition } from '../utils'
 
+// CONSTANT
+import { defaultButtonStyle } from '../constants'
+
 const MakeShareButton = (name, url, Icon, openShareDialogOnClick, imgConfig) => {
   const handleOnClick = e => {
     e.preventDefault()
@@ -14,13 +17,7 @@ const MakeShareButton = (name, url, Icon, openShareDialogOnClick, imgConfig) => 
 
   return createElement(
     'button',
-    {
-      type: 'button',
-      'aria-label': `Share-${name}`,
-      title: name,
-      onClick: handleOnClick,
-      style: { border: 'none', background: 'transparent' },
-    },
+    { type: 'button', 'aria-label': `${name}-Share`, title: name, onClick: handleOnClick, style: defaultButtonStyle },
     createElement('img', {
       src: Icon,
       alt: `${name} Icon`,
