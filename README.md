@@ -79,9 +79,11 @@ import { BufferShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { DiggShareBtn } from 'dv-social-share'
-;<DiggShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />
+
+<DiggShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />
 ```
 
 #### 📖 DiggShareBtn Props
@@ -99,9 +101,11 @@ import { DiggShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { EmailShareBtn } from 'dv-social-share'
-;<EmailShareBtn url="https://dv-social-share.vercel.app" />
+
+<EmailShareBtn url="https://dv-social-share.vercel.app" />
 ```
 
 #### 📖 EmailShareBtn Props
@@ -121,9 +125,11 @@ import { EmailShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { FBMessangerShareBtn } from 'dv-social-share'
-;<FBMessangerShareBtn url="https://dv-social-share.vercel.app" appId="" />
+
+<FBMessangerShareBtn url="https://dv-social-share.vercel.app" appId="" />
 ```
 
 #### 📖 FBMessangerShareBtn Props
@@ -143,9 +149,11 @@ import { FBMessangerShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { FBShareBtn } from 'dv-social-share'
-;<FBShareBtn url="https://dv-social-share.vercel.app" quote="dv-social-share is a social share buttons for your next React.js & Next.js apps." hashTag="#dvsocialshare" />
+
+<FBShareBtn url="https://dv-social-share.vercel.app" quote="dv-social-share is a social share buttons for your next React.js & Next.js apps." hashTag="#dvsocialshare" />
 ```
 
 #### 📖 FBShareBtn Props
@@ -164,9 +172,11 @@ import { FBShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { FlipboardShareBtn } from 'dv-social-share'
-;<FlipboardShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />
+
+<FlipboardShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />
 ```
 
 #### 📖 FlipboardShareBtn Props
@@ -184,9 +194,11 @@ import { FlipboardShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { GABShareBtn } from 'dv-social-share'
-;<GABShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<GABShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 GABShareBtn Props
@@ -204,9 +216,11 @@ import { GABShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { HackerNewsShareBtn } from 'dv-social-share'
-;<HackerNewsShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<HackerNewsShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 HackerNewsShareBtn Props
@@ -224,9 +238,11 @@ import { HackerNewsShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { InstapaperShareBtn } from 'dv-social-share'
-;<InstapaperShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<InstapaperShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 InstapaperShareBtn Props
@@ -245,9 +261,11 @@ import { InstapaperShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { LineShareBtn } from 'dv-social-share'
-;<LineShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<LineShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 LineShareBtn Props
@@ -265,9 +283,11 @@ import { LineShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { LinkedInShareBtn } from 'dv-social-share'
-;<LinkedInShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<LinkedInShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 LinkedInShareBtn Props
@@ -287,9 +307,11 @@ import { LinkedInShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { LiveJournalShareBtn } from 'dv-social-share'
-;<LiveJournalShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />
+
+<LiveJournalShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />
 ```
 
 #### 📖 LiveJournalShareBtn Props
@@ -307,9 +329,11 @@ import { LiveJournalShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { PinboardShareBtn } from 'dv-social-share'
-;<PinboardShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" descriptin="descriptino to be shared" />
+
+<PinboardShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" descriptin="descriptino to be shared" />
 ```
 
 #### 📖 PinboardShareBtn Props
@@ -328,9 +352,11 @@ import { PinboardShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { PinterestShareBtn } from 'dv-social-share'
-;<PinterestShareBtn url="https://dv-social-share.vercel.app" media="https://dv-social-share.vercel.app/image.svg" />
+
+<PinterestShareBtn url="https://dv-social-share.vercel.app" media="https://dv-social-share.vercel.app/image.svg" />
 ```
 
 #### 📖 PinterestShareBtn Props
@@ -349,9 +375,11 @@ import { PinterestShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { PocketShareBtn } from 'dv-social-share'
-;<PocketShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<PocketShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 PocketShareBtn Props
@@ -369,9 +397,11 @@ import { PocketShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js copy
 import { RedditShareBtn } from 'dv-social-share'
-;<RedditShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<RedditShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 RedditShareBtn Props
@@ -389,9 +419,11 @@ import { RedditShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js copy
 import { RefindShareBtn } from 'dv-social-share'
-;<RefindShareBtn url="https://dv-social-share.vercel.app" />
+
+<RefindShareBtn url="https://dv-social-share.vercel.app" />
 ```
 
 #### 📖 RefindShareBtn Props
@@ -408,9 +440,11 @@ import { RefindShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js copy
 import { TelegramShareBtn } from 'dv-social-share'
-;<TelegramShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<TelegramShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 TelegramShareBtn Props
@@ -428,9 +462,11 @@ import { TelegramShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js copy
 import { TrelloShareBtn } from 'dv-social-share'
-;<TrelloShareBtn url="https://dv-social-share.vercel.app" desc="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<TrelloShareBtn url="https://dv-social-share.vercel.app" desc="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 TrelloShareBtn Props
@@ -448,9 +484,11 @@ import { TrelloShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js copy
 import { TumblrShareBtn } from 'dv-social-share'
-;<TumblrShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<TumblrShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 TumblrShareBtn Props
@@ -471,9 +509,11 @@ import { TumblrShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js
 import { TwitterShareBtn } from 'dv-social-share'
-;<TwitterShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<TwitterShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 TwitterShareBtn Props
@@ -494,9 +534,11 @@ import { TwitterShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js copy
 import { VKShareBtn } from 'dv-social-share'
-;<VKShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<VKShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 VKShareBtn Props
@@ -517,9 +559,11 @@ import { VKShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
+<!-- prettier-ignore -->
 ```js copy
 import { WhatsAppShareBtn } from 'dv-social-share'
-;<WhatsAppShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+
+<WhatsAppShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
 ```
 
 #### 📖 WhatsAppShareBtn Props
