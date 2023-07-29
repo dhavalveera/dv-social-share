@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { FlipboardShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { FLIPBOARD_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateFlipboardLink = (url, { title }) => {
   return `https://share.flipboard.com/bookmarklet/popout${generateQueryParams({ v: 2, title, url })}`
 }
 
 const FlipboardShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('Flipboard', generateFlipboardLink(url, { title }), FlipboardShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(FLIPBOARD_NAME, generateFlipboardLink(url, { title }), FlipboardShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 FlipboardShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

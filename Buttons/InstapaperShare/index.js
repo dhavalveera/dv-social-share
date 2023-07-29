@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { InstaPaperShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { INSTAPAPER_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateInstapaperLink = (url, { title, description }) => {
   return `http://www.instapaper.com/hello2${generateQueryParams({ url, title, description })}`
 }
 
 const InstapaperShareBtn = ({ url, title, description, openInNewTab, imgConfig }) =>
-  MakeShareButton('Instapaper', generateInstapaperLink(url, { title, description }), InstaPaperShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(INSTAPAPER_NAME, generateInstapaperLink(url, { title, description }), InstaPaperShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 InstapaperShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

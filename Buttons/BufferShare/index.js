@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { BufferIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { BUFFER_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateBufferLink = (url, { title }) => {
   return `https://publish.buffer.com/compose${generateQueryParams({ text: title, url })}`
 }
 
 const BufferShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('Buffer', generateBufferLink(url, { title }), BufferIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(BUFFER_NAME, generateBufferLink(url, { title }), BufferIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 BufferShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

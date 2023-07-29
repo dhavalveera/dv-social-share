@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { LineShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { LINE_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateLineLink = (url, { title }) => {
   return `https://social-plugins.line.me/lineit/share${generateQueryParams({ url, text: title })}`
 }
 
 const LineShareBtn = ({ url, title, description, openInNewTab, imgConfig }) =>
-  MakeShareButton('Line', generateLineLink(url, { title, description }), LineShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(LINE_NAME, generateLineLink(url, { title, description }), LineShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 LineShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

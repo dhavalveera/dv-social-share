@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { LinkedInShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { LINKEDIN_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateLinkedInLink = (url, { title, summary, source }) => {
   return `https://linkedin.com/sharing/share-offsite${generateQueryParams({ url, mini: 'true', title, summary, source })}`
 }
 
 const LinkedInShareBtn = ({ url, title, summary, source, openInNewTab, imgConfig }) =>
-  MakeShareButton('LinkedIn', generateLinkedInLink(url, { title, summary, source }), LinkedInShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(LINKEDIN_NAME, generateLinkedInLink(url, { title, summary, source }), LinkedInShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 LinkedInShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { PinterestShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { PINTEREST_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generatePinterestLink = (url, { media, description }) => {
   return `https://pinterest.com/pin/create/button/${generateQueryParams({ url, media, description })}`
 }
 
 const PinterestShareBtn = ({ url, media, description, openInNewTab, imgConfig }) =>
-  MakeShareButton('Pinterest', generatePinterestLink(url, { media, description }), PinterestShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(PINTEREST_NAME, generatePinterestLink(url, { media, description }), PinterestShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 PinterestShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

@@ -11,7 +11,7 @@ import MakeShareButton from '../../ShareButton'
 import { TwitterShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { TWITTER_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateTwitterLink = (url, { title, via, hashTags = [], related = [] }) => {
   return `https://twitter.com/intent/tweet${generateQueryParams({
@@ -24,7 +24,7 @@ const generateTwitterLink = (url, { title, via, hashTags = [], related = [] }) =
 }
 
 const TwitterShareBtn = ({ url, title, via, hashTags, related, openInNewTab, imgConfig }) =>
-  MakeShareButton('Twitter', generateTwitterLink(url, { title, via, hashTags, related }), TwitterShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(TWITTER_NAME, generateTwitterLink(url, { title, via, hashTags, related }), TwitterShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 TwitterShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

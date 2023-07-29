@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { GABShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { GAB_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateGABLink = (url, { title }) => {
   return `https://gab.com/compose${generateQueryParams({ url, text: title })}`
 }
 
 const GABShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('GAB', generateGABLink(url, { title }), GABShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(GAB_NAME, generateGABLink(url, { title }), GABShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 GABShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

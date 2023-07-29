@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { TelegramShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { TELEGRAM_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateTelegramLink = (url, { title }) => {
   return `https://t.me/share/url${generateQueryParams({ url, title })}`
 }
 
 const TelegramShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('Telegram', generateTelegramLink(url, { title }), TelegramShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(TELEGRAM_NAME, generateTelegramLink(url, { title }), TelegramShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 TelegramShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

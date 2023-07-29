@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { DiggIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { DIGG_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateDiggLink = (url, { title }) => {
   return `http://digg.com/submit${generateQueryParams({ url, title })}`
 }
 
 const DiggShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('Digg', generateDiggLink(url, { title }), DiggIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(DIGG_NAME, generateDiggLink(url, { title }), DiggIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 DiggShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { PocketShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { POCKET_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generatePocketLink = (url, { title }) => {
   return `https://getpocket.com/save${generateQueryParams({ url, title })}`
 }
 
 const PocketShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('Pocket', generatePocketLink(url, { title }), PocketShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(POCKET_NAME, generatePocketLink(url, { title }), PocketShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 PocketShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

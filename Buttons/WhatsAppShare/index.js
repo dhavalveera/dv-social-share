@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { WhatsAppShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { WHATSAPP_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateWhatsAppLink = (url, { title, separator = ' :: ' }) => {
   return `https://${isMobileOrTablet() ? 'api' : 'web'}.whatsapp.com/send${generateQueryParams({ text: title ? title + separator + url : url })}`
 }
 
 const WhatsAppShareBtn = ({ url, title, separator, openInNewTab, imgConfig }) =>
-  MakeShareButton('WhatsApp', generateWhatsAppLink(url, { title, separator }), WhatsAppShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(WHATSAPP_NAME, generateWhatsAppLink(url, { title, separator }), WhatsAppShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 WhatsAppShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

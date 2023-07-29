@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { FBMessangerIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { FB_MESSENGER_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateFBMessangerLink = (url, { appId, redirectUri, to }) => {
   return `https://www.facebook.com/dialog/send${generateQueryParams({ link: url, redirect_uri: redirectUri || url, app_id: appId, to })}`
 }
 
 const FBMessangerShareBtn = ({ url, appId, redirectUri, to, openInNewTab, imgConfig }) =>
-  MakeShareButton('Facebook Messanger', generateFBMessangerLink(url, { appId, redirectUri, to }), FBMessangerIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(FB_MESSENGER_NAME, generateFBMessangerLink(url, { appId, redirectUri, to }), FBMessangerIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 FBMessangerShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

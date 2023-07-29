@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { HackerNewsShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { HACKERNEWS_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateHackerNewsLink = (url, { title }) => {
   return `http://news.ycombinator.com/submitlink${generateQueryParams({ url, text: title })}`
 }
 
 const HackerNewsShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('HackerNews', generateHackerNewsLink(url, { title }), HackerNewsShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(HACKERNEWS_NAME, generateHackerNewsLink(url, { title }), HackerNewsShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 HackerNewsShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

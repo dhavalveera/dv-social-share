@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { FBShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { FB_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateFBLink = (url, { quote, hashTags }) => {
   return `https://www.facebook.com/sharer/sharer.php${generateQueryParams({ u: url, quote, hashTags })}`
 }
 
 const FBShareBtn = ({ url, quote, hashTags, openInNewTab, imgConfig }) =>
-  MakeShareButton('Facebook', generateFBLink(url, { quote, hashTags }), FBShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(FB_NAME, generateFBLink(url, { quote, hashTags }), FBShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 FBShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { RedditShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { REDDIT_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generateRedditLink = (url, { title }) => {
   return `https://www.reddit.com/submit${generateQueryParams({ url, title })}`
 }
 
 const RedditShareBtn = ({ url, title, openInNewTab, imgConfig }) =>
-  MakeShareButton('Reddit', generateRedditLink(url, { title }), RedditShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(REDDIT_NAME, generateRedditLink(url, { title }), RedditShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 RedditShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

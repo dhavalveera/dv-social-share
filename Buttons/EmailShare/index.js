@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { EmailIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, openShareDialogOnClick } from '../../constants'
+import { EMAIL_NAME, defaultImgConfig, openShareDialogOnClick } from '../../constants'
 
 const generateEmailLink = (url, { subject, body, separator = ' :: ' }) => {
   return `mailto:${generateQueryParams({ subject, body: body ? body + separator + url : url })}`
 }
 
 const EmailShareBtn = ({ url, subject, body, separator, openInNewTab, imgConfig }) =>
-  MakeShareButton('Email', generateEmailLink(url, { subject, body, separator }), EmailIcon, openInNewTab || openShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(EMAIL_NAME, generateEmailLink(url, { subject, body, separator }), EmailIcon, openInNewTab || openShareDialogOnClick, imgConfig || defaultImgConfig)
 
 EmailShareBtn.propTypes = {
   url: PropTypes.string.isRequired,

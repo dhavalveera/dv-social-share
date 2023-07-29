@@ -11,14 +11,14 @@ import MakeShareButton from '../../ShareButton'
 import { PinboardShareIcon } from '../../icons'
 
 // Constants
-import { defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
+import { PINBOARD_NAME, defaultImgConfig, dontOpenShareDialogOnClick } from '../../constants'
 
 const generatePinboardLink = (url, { title, description }) => {
   return `https://pinboard.in/add${generateQueryParams({ url, title, description })}`
 }
 
 const PinboardShareBtn = ({ url, title, description, openInNewTab, imgConfig }) =>
-  MakeShareButton('Pinboard', generatePinboardLink(url, { title, description }), PinboardShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
+  MakeShareButton(PINBOARD_NAME, generatePinboardLink(url, { title, description }), PinboardShareIcon, openInNewTab || dontOpenShareDialogOnClick, imgConfig || defaultImgConfig)
 
 PinboardShareBtn.propTypes = {
   url: PropTypes.string.isRequired,
