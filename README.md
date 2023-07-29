@@ -57,8 +57,8 @@ yarn add dv-social-share --save
 
 #### 👨‍💻 Code
 
-```js
 <!-- prettier-ignore -->
+```js
 import { BufferShareBtn } from 'dv-social-share'
 
 <BufferShareBtn url="https://dv-social-share.vercel.app" title="Dhaval Vira" />
