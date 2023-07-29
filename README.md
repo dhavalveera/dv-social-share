@@ -579,6 +579,29 @@ import { WhatsAppShareBtn } from 'dv-social-share'
 
 ---
 
+## YummlyShare
+
+#### 👨‍💻 Code
+
+
+```js copy
+import { YummlyShareBtn } from 'dv-social-share'
+
+<YummlyShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." image='url-of-image' />
+```
+
+#### 📖 YummlyShareBtn Props
+
+| Props        | Type    | Default | Description                                                                                                                   | Required |
+| :----------- | :------ | :------ | :---------------------------------------------------------------------------------------------------------------------------- | :------- |
+| url          | string  |         | The URL of the shared page to be shared.                                                                                      | ✅       |
+| title        | string  |         | The title of the shared page.                                                                                                 | ❌       |
+| image    | string  |         | The Link of the Image to be shared along.                                                                                                                           | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`.                                                                              | ❌       |
+| imgConfig    | object  |         | A imgConfig contains width (number; e.g. 32/64), height (number; e.g. 32/64) & bgColor (string; e.g. '#FF0000') for the Image | ❌       |
+
+---
+
 ## 💖 Wrap Up
 
 If you think any of the `dv-social-share` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this

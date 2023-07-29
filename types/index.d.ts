@@ -271,6 +271,18 @@ type WhatsAppShareBtnProps = {
   }
 }
 
+type YummlyShareBtnProps = {
+  url?: string
+  title?: string
+  image?: string
+  openInNewTab?: boolean
+  imgConfig?: {
+    width?: number
+    height?: number
+    bgColor?: string
+  }
+}
+
 declare module 'dv-social-share' {
   import React from 'react'
 
@@ -319,4 +331,6 @@ declare module 'dv-social-share' {
   export function VKShareBtn({ url, title, image, noParse, noVkLinks, openInNewTab, imgConfig }: VKShareBtnProps): React.ReactNode
 
   export function WhatsAppShareBtn({ url, title, separator, openInNewTab, imgConfig }: WhatsAppShareBtnProps): React.ReactNode
+
+  export function YummlyShareBtn({ url, title, image, openInNewTab, imgConfig }: YummlyShareBtnProps): React.ReactNode
 }
