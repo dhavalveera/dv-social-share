@@ -27,12 +27,21 @@ Social media share buttons for your next React.js, Next.js apps.
   - Pocket
   - Reddit
   - Refind
+  - Skype
   - Telegram
   - Trello
   - Tumblr
   - Twitter
   - VK
   - WhatsApp
+  - Yummly
+
+# Demo
+---
+
+to View Demo, please Click [here](https://dv-social-share.vercel.app)
+
+---
 
 # ⚙ Install
 
