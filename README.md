@@ -587,7 +587,11 @@ import { WhatsAppShareBtn } from 'dv-social-share'
 ```js copy
 import { YummlyShareBtn } from 'dv-social-share'
 
-<YummlyShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." image='url-of-image' />
+<YummlyShareBtn 
+    url="https://dv-social-share.vercel.app" 
+    title="dv-social-share is a social share buttons for your next React.js & Next.js apps." 
+    image='url-of-image' 
+/>
 ```
 
 #### 📖 YummlyShareBtn Props
