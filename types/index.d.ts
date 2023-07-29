@@ -206,6 +206,17 @@ type TelegramShareBtnProps = {
   }
 }
 
+type TrelloShareBtnProps = {
+  url?: string
+  desc?: string
+  openInNewTab?: boolean
+  imgConfig?: {
+    width?: number
+    height?: number
+    bgColor?: string
+  }
+}
+
 type TumblrShareBtnProps = {
   url?: string
   title?: string
@@ -298,6 +309,8 @@ declare module 'dv-social-share' {
   export function RefindShareBtn({ url, openInNewTab, imgConfig }: RefindShareBtnProps): React.ReactNode
 
   export function TelegramShareBtn({ url, title, openInNewTab, imgConfig }: TelegramShareBtnProps): React.ReactNode
+
+  export function TrelloShareBtn({ url, desc, openInNewTab, imgConfig }: TrelloShareBtnProps): React.ReactNode
 
   export function TumblrShareBtn({ url, title, caption, tags, postTypes, openInNewTab, imgConfig }: TumblrShareBtnProps): React.ReactNode
 
