@@ -195,6 +195,17 @@ type RefindShareBtnProps = {
   }
 }
 
+type SkypeShareBtnProps = {
+  url?: string
+  title?: string
+  openInNewTab?: boolean
+  imgConfig?: {
+    width?: number
+    height?: number
+    bgColor?: string
+  }
+}
+
 type TelegramShareBtnProps = {
   url?: string
   title?: string
@@ -319,6 +330,8 @@ declare module 'dv-social-share' {
   export function RedditShareBtn({ url, title, openInNewTab, imgConfig }: RedditShareBtnProps): React.ReactNode
 
   export function RefindShareBtn({ url, openInNewTab, imgConfig }: RefindShareBtnProps): React.ReactNode
+
+  export function SkypeShareBtn({ url, title, openInNewTab, imgConfig }: SkypeShareBtnProps): React.ReactNode
 
   export function TelegramShareBtn({ url, title, openInNewTab, imgConfig }: TelegramShareBtnProps): React.ReactNode
 

@@ -437,6 +437,28 @@ import { RefindShareBtn } from 'dv-social-share'
 
 ---
 
+## SkypeShare
+
+#### 👨‍💻 Code
+
+
+```js copy
+import { SkypeShareBtn } from 'dv-social-share'
+
+<SkypeShareBtn url="https://dv-social-share.vercel.app" title='Dhaval" />
+```
+
+#### 📖 SkypeShareBtn Props
+
+| Props        | Type    | Default | Description                                                                                                                   | Required |
+| :----------- | :------ | :------ | :---------------------------------------------------------------------------------------------------------------------------- | :------- |
+| url          | string  |         | The URL of the to be page.                                                                                                    | ✅       |
+| title | string |    | The title to be shared.                                                                              | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`.                                                                              | ❌       |
+| imgConfig    | object  |         | A imgConfig contains width (number; e.g. 32/64), height (number; e.g. 32/64) & bgColor (string; e.g. '#FF0000') for the Image | ❌       |
+
+---
+
 ## TelegramShare
 
 #### 👨‍💻 Code
