@@ -1,6 +1,6 @@
 {
   "name": "dv-social-share",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Social media share buttons for your next apps like React, Next.js, Vue.js, Angular.",
   "publishConfig": {
     "access": "public"
@@ -27,7 +27,10 @@
     "social-share-links",
     "share-button",
     "social-share",
-    "social-media-share-link"
+    "social-media-share-link",
+    "share-blogs",
+    "share-posts",
+    "share-blogs-on-social"
   ],
   "author": "Dhaval Vira <dhavalveera@gmail.com> (https://github.com/dhavalveera)",
   "homepage": "https://dv-social-share.vercel.app",
