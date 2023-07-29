@@ -1,3 +1,4 @@
+<!-- prettier-ignore-start -->
 # dv-social-share
 
 ---
@@ -57,7 +58,7 @@ yarn add dv-social-share --save
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { BufferShareBtn } from 'dv-social-share'
 
@@ -79,7 +80,7 @@ import { BufferShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { DiggShareBtn } from 'dv-social-share'
 
@@ -101,7 +102,7 @@ import { DiggShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { EmailShareBtn } from 'dv-social-share'
 
@@ -125,7 +126,7 @@ import { EmailShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { FBMessangerShareBtn } from 'dv-social-share'
 
@@ -149,7 +150,7 @@ import { FBMessangerShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { FBShareBtn } from 'dv-social-share'
 
@@ -172,7 +173,7 @@ import { FBShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { FlipboardShareBtn } from 'dv-social-share'
 
@@ -194,7 +195,7 @@ import { FlipboardShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { GABShareBtn } from 'dv-social-share'
 
@@ -216,7 +217,7 @@ import { GABShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { HackerNewsShareBtn } from 'dv-social-share'
 
@@ -238,7 +239,7 @@ import { HackerNewsShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { InstapaperShareBtn } from 'dv-social-share'
 
@@ -261,7 +262,7 @@ import { InstapaperShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { LineShareBtn } from 'dv-social-share'
 
@@ -283,7 +284,7 @@ import { LineShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { LinkedInShareBtn } from 'dv-social-share'
 
@@ -307,7 +308,7 @@ import { LinkedInShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { LiveJournalShareBtn } from 'dv-social-share'
 
@@ -329,7 +330,7 @@ import { LiveJournalShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { PinboardShareBtn } from 'dv-social-share'
 
@@ -352,7 +353,7 @@ import { PinboardShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { PinterestShareBtn } from 'dv-social-share'
 
@@ -375,7 +376,7 @@ import { PinterestShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { PocketShareBtn } from 'dv-social-share'
 
@@ -397,7 +398,7 @@ import { PocketShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js copy
 import { RedditShareBtn } from 'dv-social-share'
 
@@ -419,7 +420,7 @@ import { RedditShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js copy
 import { RefindShareBtn } from 'dv-social-share'
 
@@ -440,7 +441,7 @@ import { RefindShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js copy
 import { TelegramShareBtn } from 'dv-social-share'
 
@@ -462,7 +463,7 @@ import { TelegramShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js copy
 import { TrelloShareBtn } from 'dv-social-share'
 
@@ -484,7 +485,7 @@ import { TrelloShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js copy
 import { TumblrShareBtn } from 'dv-social-share'
 
@@ -509,7 +510,7 @@ import { TumblrShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js
 import { TwitterShareBtn } from 'dv-social-share'
 
@@ -534,7 +535,7 @@ import { TwitterShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js copy
 import { VKShareBtn } from 'dv-social-share'
 
@@ -559,7 +560,7 @@ import { VKShareBtn } from 'dv-social-share'
 
 #### 👨‍💻 Code
 
-<!-- prettier-ignore -->
+
 ```js copy
 import { WhatsAppShareBtn } from 'dv-social-share'
 
@@ -602,3 +603,4 @@ How to contribute:
 ## ⚖️ License
 
 The MIT License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<!-- prettier-ignore-end -->
