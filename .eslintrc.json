@@ -1,20 +1,8 @@
 {
   "root": true,
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "es6": true,
-    "node": true
-  },
-  "extends": ["plugin:react/recommended", "airbnb", "prettier", "plugin:prettier/recommended"],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:react/recommended", "airbnb", "prettier", "plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"],
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
@@ -77,13 +65,9 @@
     "react/forbid-prop-types": "off"
   },
   "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["."]
-      },
-      "alias": {
-        "extensions": [".js", ".jsx"]
-      }
+    "react": {
+      "pragma": "React",
+      "version": "detect"
     }
   }
 }
