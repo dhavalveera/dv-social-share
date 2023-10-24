@@ -1,7 +1,7 @@
 {
   "name": "dv-social-share",
-  "version": "0.0.6",
-  "description": "Social media share buttons for your next apps like React, Next.js, Vue.js, Angular written in TypeScript.",
+  "version": "0.0.6-1",
+  "description": "Social media share buttons for your next apps like React, Next.js in TypeScript.",
   "author": "Dhaval Vira <dhavalveera@gmail.com> (https://github.com/dhavalveera)",
   "license": "MIT",
   "repository": {
@@ -18,9 +18,6 @@
     "next",
     "nextjs",
     "next.js",
-    "vue",
-    "vuejs",
-    "vue.js",
     "social-share-links",
     "share-button",
     "social-share",
