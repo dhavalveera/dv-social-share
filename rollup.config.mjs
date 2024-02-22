@@ -19,7 +19,7 @@ export default {
     },
   ],
   // external: builtins,
-  external: ['react'],
+  external: ['react', 'react-dom'],
   plugins: [
     resolve(),
     babel({
@@ -35,7 +35,7 @@ export default {
     // }),
     // nodeResolve(),
     commonjs({
-      extensions: ['.js', '.ts', '.tsx'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }),
     terser(),
   ],

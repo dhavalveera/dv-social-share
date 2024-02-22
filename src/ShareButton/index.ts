@@ -21,8 +21,6 @@ const MakeShareButton = (name: string, url: string, Icon: string, openShareDialo
     CustomWindow(url, windowConfig, openShareDialogOnClick)
   }
 
-  console.log({ name, url, Icon, imgConfig })
-
   return createElement(
     'button',
     { type: 'button', 'aria-label': `${name}-Share`, title: name, onClick: handleOnClick, className: ShareBtnCss },
