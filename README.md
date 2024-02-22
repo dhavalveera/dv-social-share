@@ -29,6 +29,7 @@ Social media share buttons for your next React.js, Next.js apps.
   - Refind
   - Skype
   - Telegram
+  - Threads
   - Trello
   - Tumblr
   - Twitter
@@ -507,6 +508,28 @@ import { TrelloShareBtn } from 'dv-social-share'
 | :----------- | :------ | :------ | :---------------------------------------------------------------------------------------------------------------------------- | :------- |
 | url          | string  |         | The URL of the to be page.                                                                                                    | ✅       |
 | desc         | string  |         | Description of the shared page.                                                                                               | ❌       |
+| openInNewTab | boolean | false   | Open share window in a new tab if set to `true`.                                                                              | ❌       |
+| imgConfig    | object  |         | A imgConfig contains width (number; e.g. 32/64), height (number; e.g. 32/64) & bgColor (string; e.g. '#FF0000') for the Image | ❌       |
+
+---
+
+## ThreadsShare
+
+#### 👨‍💻 Code
+
+
+```js copy
+import { ThreadsShareBtn } from 'dv-social-share'
+
+<ThreadsShareBtn url="https://dv-social-share.vercel.app" title="dv-social-share is a social share buttons for your next React.js & Next.js apps." />
+```
+
+#### 📖 ThreadsShareBtn Props
+
+| Props        | Type    | Default | Description                                                                                                                   | Required |
+| :----------- | :------ | :------ | :---------------------------------------------------------------------------------------------------------------------------- | :------- |
+| url          | string  |         | The URL of the to be page.                                                                                                    | ✅       |
+| title         | string  |         | Description of the shared page.                                                                                               | ❌       |
 | openInNewTab | boolean | false   | Open share window in a new tab if set to `true`.                                                                              | ❌       |
 | imgConfig    | object  |         | A imgConfig contains width (number; e.g. 32/64), height (number; e.g. 32/64) & bgColor (string; e.g. '#FF0000') for the Image | ❌       |
 

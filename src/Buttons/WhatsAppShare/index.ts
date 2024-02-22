@@ -1,5 +1,5 @@
 // Utils
-import { generateQueryParams, isMobileOrTablet } from '../../utils'
+import { generateQueryParams } from '../../utils'
 
 // Make Share Button => Contains Main logic
 import MakeShareButton from '../../ShareButton'
@@ -25,7 +25,7 @@ type WhatsAppShareBtnTypes = {
 }
 
 const generateWhatsAppLink = (url: string, { title, separator = ' :: ' }: GenerateWhatsAppLinkTypes) => {
-  return `https://${isMobileOrTablet() ? 'api' : 'web'}.whatsapp.com/send${generateQueryParams({ text: title ? title + separator + url : url })}`
+  return `https://api.whatsapp.com/send${generateQueryParams({ text: title ? title + separator + url : url })}`
 }
 
 const WhatsAppShareBtn = ({ url, title, separator, openInNewTab, imgConfig }: WhatsAppShareBtnTypes) => {
